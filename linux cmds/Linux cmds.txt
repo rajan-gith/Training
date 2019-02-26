@@ -1,3 +1,8 @@
 Linux:
  distribution-> Ubuntu 
  version-> 16.04 LTS
+
+Some basic commands in linux:
+ for making a directory:
+   mkdir dir_name
+   eg. mkdir practice    this will make a directory named "practice"
