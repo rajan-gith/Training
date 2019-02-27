@@ -34,6 +34,3 @@ Git is a versioning tool used to maintiain version of files.
 
 'git push -u remote_name branch' :- this cmd will push all your local changes/versioning to repository
 
-'git branch' :- this cmd will list all the branches in a repo
-
-'git branch <new_branch_name>' :- this cmd will create new branch. 
