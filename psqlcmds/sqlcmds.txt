@@ -19,3 +19,22 @@ welcome txt "postgres=#    "
 'CREATE DATABASE dummydb;' :- This query created database 'dummydb'.
 
 'DROP DATABASE dummydb;' :- This query drops the dummydb.
+
+To create a table following is the query to execute:
+
+SYNTAX:
+CREATE TABLE table_name(
+column1 datatype(size) constraints,
+column2 datatype(size) constraints,
+column3 datatype(size) constraints,
+);   
+
+eg:
+
+CREATE TABLE employees(
+ID INT PRIMARY KEY NOT NULL,
+NAME TEXT NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR(50),
+SALARY REAL,
+);   
