@@ -11,3 +11,7 @@ welcome txt "postgres=#    "
 '\c' :- This cmd is used to show connected database.
 
 '\c <database_name>' : To connect to a database.
+
+'\d' :- This cmd list all tables in selected database.
+
+'\d <table_name>' :- This cmd is used to describe table.
