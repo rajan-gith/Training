@@ -21,3 +21,5 @@ Git is a versioning tool used to maintiain version of files.
 
 'git diff' :- it is used to compare difference in between two version of files.
 	'git diff commit_id1 commit_id2'.
+
+'git clone repo_url' : this cmd is used to clone or download the given repo. 
