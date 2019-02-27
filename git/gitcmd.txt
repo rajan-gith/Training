@@ -12,3 +12,7 @@ Git is a versioning tool used to maintiain version of files.
 'git commit' :- git commit are used to commit the changes in repo this will maintain a version and every commit have hash key or commit id.
 	'git commit' always have a message with every commit and 
 	'git commit -m "here goes your msg"' this is how the messages with commit are stored. 
+
+'git status' :- this shows the git repo status.
+
+'git log' :- this will print all history of commits. 
