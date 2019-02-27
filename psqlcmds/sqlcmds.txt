@@ -46,3 +46,6 @@ DROP TABLE <table_name>;
 To delete rows from a table:
 Syntax:
 TRUNCATE TABLE <table_name>;
+
+SELECT:
+select * from actor;
