@@ -4,9 +4,115 @@ Linux:
 
 Some basic commands in linux:
  for making a directory:
-   mkdir dir_name
-   eg. mkdir practice    this will make a directory named "practice"
+   'mkdir dir_name'
+   eg. 'mkdir practice'    this will make a directory named "practice"
 
  print current working directory:
-   pwd
+   'pwd'
    this will print out current working directory
+
+ listing the Items present in given directory
+   'ls dir_name'
+   eg. 'ls' or 'ls Downloads' # if nothing supplied then it will print current directory items.
+   'ls -a' will display all items with hidden files. 
+   'ls -l' will print items with more details.
+
+ moving in between the folders:
+   cd is used for changing directories.
+   '~' represent home directory.
+   'cd -' will take you to the previous directory.
+
+   'rm' is for removing. 
+   rm is used to delete files 
+   eg. 'rm abc.txt'
+   for deleting a directory with subfolders and files we use:
+   'rm -r firectory' -r stands for recursive.
+ 
+ checking current logged in user:
+   'whoami' will tell the current logged in user
+
+ moving files:
+   'mv' is used to move files and directories 
+   'mv source destination'
+
+ copying file:
+   'cp' is used to copying file and directories
+   'cp source destination' in case of files 
+   'cp -r source destination' in case of when source is a directory 
+
+   'scp' is another command for copying files over ssh 
+   'scp source_file username@destination_host:destination folder '
+   eg. 'scp a2 temp@localhost:'
+
+ creating files:
+   there are following ways to create files
+   'cat > file_name'
+   'touch > file_name'
+ text editors
+   vi editor 
+   vi editor have two modes interactive mode and cmd mode in interatcive mode it takes input from user and in cmd mode user perform actions or special methods on the file such as saving a file, quiting from text editor.
+   'vi file_name.txt','vi -R file_name','view file_name' will open the file and will generate file if doesnot exists and will open it if already exists.
+   to get in interactive mode press 'i'
+   switch in cmd mode with 'esc' key 
+   'k' for moving cursor up
+   'h' for left
+   'j' for down
+   'l' for right 
+
+   to exit from vi editor enter ':q' to quit.
+   ':wq' to write and quit.
+   ':w' to write.
+   'x' to delete char under the cursor.
+   'X' to delete before the cursor.
+   'o' create new line below the cursor line.
+   'O' create new line above the cursor line.
+
+   '/' and '?' are used to searching chars and words in file
+   '/' searches in forward direction in file and
+   '?' searches in backwar direction in file
+   ':g/search-string/s//replace-string/g' this will replace all matching string with new strings in whole file.
+   'cc' clear current line.
+   ':s/search-string/replace-string/g' this will replace all matching string with new strings in current file.
+   'yy' copies current line.
+   'yw' copies current word.
+   'p' puts copies text after the cursor.
+
+
+ working with file permissions
+   'chmod' stands for change mode of a file or a directory.
+   'chown' stands for chnage owner of a file or a directory.
+
+   'chmod u-rwx,g-rwx,o-rwx file_name' will change permission and remove all permisions from user,groups and others 
+
+   'chmod u+rwx,g+rwx,o+rwx file_name' will add all permissions to user,groups and others
+
+   'r' stands for read
+   'w' stands for write
+   'x' stands for execute
+
+   there is numerical notaions are also
+
+   0- 'no access'					---
+   1- 'execute access'				--x
+   2- 'write access'				-w-
+   3- 'write + execute'				-wx
+   4- 'read access'					r--
+   5- 'read + execute'				r-x
+   6- 'read + write'				rw-
+   7- 'read + write + execute'		rwx
+
+   'chown user file_name'
+   this will change the owner of files
+   eg. 'chown temp v.txt' this changed the current owner of file to temp
+
+   'echo "some string"' will print some string in cli
+   'clear' cmd is used to clear the terminal 
+   'history' cmd is used to check the history of cmds ran in terminal
+
+
+
+   
+
+
+
+
