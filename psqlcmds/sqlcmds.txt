@@ -73,3 +73,10 @@ select * from actor where first_name like 'J%h%y';
 '%s' looks for string before s.
 's%' looks for string after s.
 '%s%' it will accept string befor and after s.
+
+IN and NOT IN :
+these keyword checks for the values are in given condition or not
+select * from actor where first_name IN ('Chris','Johnny','Julia');
+
+select * from actor where first_name not IN ('Chris','Johnny','Julia');
+
