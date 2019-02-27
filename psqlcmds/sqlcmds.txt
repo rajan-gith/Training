@@ -15,3 +15,6 @@ welcome txt "postgres=#    "
 '\d' :- This cmd list all tables in selected database.
 
 '\d <table_name>' :- This cmd is used to describe table.
+
+'CREATE DATABASE dummydb;' :- This query created database 'dummydb' 
+ 
