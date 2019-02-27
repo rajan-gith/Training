@@ -4,3 +4,6 @@ To run Postgresql
 cmd = 'psql -U postgres' here after -U username is supplied in ths case 'postgres'
 prompted for password
 welcome txt "postgres=#    "
+
+
+'\l' :- This psql cmd is used to list all databases 
