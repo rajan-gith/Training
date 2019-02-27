@@ -16,5 +16,6 @@ welcome txt "postgres=#    "
 
 '\d <table_name>' :- This cmd is used to describe table.
 
-'CREATE DATABASE dummydb;' :- This query created database 'dummydb' 
- 
+'CREATE DATABASE dummydb;' :- This query created database 'dummydb'.
+
+'DROP DATABASE dummydb;' :- This query drops the dummydb.
