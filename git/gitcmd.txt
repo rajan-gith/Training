@@ -16,3 +16,8 @@ Git is a versioning tool used to maintiain version of files.
 'git status' :- this shows the git repo status.
 
 'git log' :- this will print all history of commits. 
+
+'git log --stat' :- this is same as above 'git log' but with more details.
+
+'git diff' :- it is used to compare difference in between two version of files.
+	'git diff commit_id1 commit_id2'.
