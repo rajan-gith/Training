@@ -80,3 +80,5 @@ select * from actor where first_name IN ('Chris','Johnny','Julia');
 
 select * from actor where first_name not IN ('Chris','Johnny','Julia');
 
+DISINCT: this will only display distinct itmes from a column
+select DISTINCT column from table
