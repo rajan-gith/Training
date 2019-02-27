@@ -6,4 +6,8 @@ prompted for password
 welcome txt "postgres=#    "
 
 
-'\l' :- This psql cmd is used to list all databases 
+'\l' :- This psql cmd is used to list all databases. 
+
+'\c' :- This cmd is used to show connected database.
+
+'\c <database_name>' : To connect to a database.
