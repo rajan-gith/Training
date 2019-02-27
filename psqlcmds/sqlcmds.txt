@@ -58,3 +58,11 @@ Insert into actor (actor_id,first_name,last_name) values(201,'Robert','Downey Jr
 DELETE:
 [DELETE FROM table_name WHERE column1=value1;]
 delete from actor where actor_id=201;
+
+UPDATE:
+[UPDATE table_name SET column1=value , column2=value, Where condition;]
+update actor set first_name='Case' where actor_id=1;
+
+Order by:
+[SELECT columns from table_name ORDER BY column [asc|desc];]
+select * from actor order by actor_id desc;
