@@ -103,3 +103,16 @@ GROUP BY column1, column2
 HAVING [ conditions ];
 eg. SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) < 2;
 
+Constrained are rules on data columns on the table.
+NOT NULL: values should not be null or column should not be empty.
+Unique: all values should be unique.
+primary key: Uniquely identifies each row/record in a database table.
+
+foreign key: Constrains data based on columns in other tables.
+
+check: checks the condition.
+
+#Creating foreign key in table.
+
+create table department(id int primary key not null,dept char(50) not null, emp_id int, foreign key (emp_id) references company (idd
+));
