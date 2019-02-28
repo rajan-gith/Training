@@ -131,3 +131,16 @@ Left outer join: SELECT ... FROM table1 LEFT OUTER JOIN table2 ON conditional_ex
 Right outer join :SELECT ... FROM table1 RIGHT OUTER JOIN table2 ON conditional_expression ...
 
 full outer join : SELECT ... FROM table1 FULL OUTER JOIN table2 ON conditional_expression ...
+
+UNION clause/operator is used to combine the results of two or more SELECT statements without returning any duplicate rows.
+and UNION ALL include duplicate rows
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+UNION
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
