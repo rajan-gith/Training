@@ -114,7 +114,7 @@ check: checks the condition.
 
 #Creating foreign key in table.
 
-create table department(id int primary key not null,dept char(50) not null, emp_id int, foreign key (emp_id) references company (idd
+create table department(id int primary key not null,dept char(50) not null, emp_id int, foreign key (emp_id) references company (id
 ));
 
 JOINS: Joins clause is used to combine records from two or more tables in a database. A JOIN is a means for combining fields from two tables by using values common to each. 
@@ -160,3 +160,22 @@ select avg(salary) from company ;
 
 SUM function is used to find out the sum of a field in various records.
 select sum(salary) from company ;
+
+PostgreSQL ARRAY_AGG function is used to concatenate the input values including null into an array.
+select array_agg(salary) from company ;
+
+altering to add new column.
+ALTER TABLE temp ADD new_column char(10) ; 
+
+altering null constraint property
+ALTER TABLE temp ALTER new_column set NOT NULL;
+
+ADDING FOREIGN KEY CONSTRAINT IN TABLE
+ALTER TABLE temp ADD CONSTRAINT fkconstraint FOREIGN KEY (id) REFERENCES company (id);
+
+DELETING FK constraint
+ALTER TABLE temp drop CONSTRAINT fkconstraint;
+
+TO delete a column from table
+ALTER TABLE temp drop new_column;
+
