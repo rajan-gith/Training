@@ -144,3 +144,19 @@ UNION
 SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]
+
+
+COUNT function is the simplest function and very useful in counting the number of records.
+SELECT COUNT(*) FROM COMPANY ;
+
+MAX function is used to find out the record with maximum value.
+select max(age) from company ;
+
+MIN function is used to find out the record with minimum value among a record set.
+select min(salary) from company ;
+
+AVG function is used to find out the average of a field in various records.
+select avg(salary) from company ;
+
+SUM function is used to find out the sum of a field in various records.
+select sum(salary) from company ;
