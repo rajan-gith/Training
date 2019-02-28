@@ -95,5 +95,11 @@ offset is also used with limit. offset means limiting from a perticular offset.
 
 eg. select * from COMPANY limit 3 offset 2;
 
-
+HAVING: this is used with group with condition
+SELECT column1, column2
+FROM table1, table2
+WHERE [ conditions ]
+GROUP BY column1, column2
+HAVING [ conditions ];
+eg. SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) < 2;
 
