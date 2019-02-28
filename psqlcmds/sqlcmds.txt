@@ -74,6 +74,10 @@ select * from actor where first_name like 'J%h%y';
 '%s' looks for string before s.
 's%' looks for string after s.
 '%s%' it will accept string befor and after s.
+here in Like there are two symbols '%' and '_'
+'%' means zero,one or multiple chars or numbers.
+'_' means single char or number.
+
 
 IN and NOT IN :
 these keyword checks for the values are in given condition or not
@@ -83,4 +87,5 @@ select * from actor where first_name not IN ('Chris','Johnny','Julia');
 
 DISINCT: this will only display distinct itmes from a column
 select DISTINCT column from table.
+
 
