@@ -62,6 +62,7 @@ delete from actor where actor_id=201;
 UPDATE:
 [UPDATE table_name SET column1=value , column2=value, Where condition;]
 update actor set first_name='Case' where actor_id=1;
+note the update cmd will update all rows by given values if where clause is not supplied.
 
 Order by:
 [SELECT columns from table_name ORDER BY column [asc|desc];]
@@ -81,4 +82,5 @@ select * from actor where first_name IN ('Chris','Johnny','Julia');
 select * from actor where first_name not IN ('Chris','Johnny','Julia');
 
 DISINCT: this will only display distinct itmes from a column
-select DISTINCT column from table
+select DISTINCT column from table.
+
