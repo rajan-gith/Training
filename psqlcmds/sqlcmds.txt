@@ -81,11 +81,19 @@ here in Like there are two symbols '%' and '_'
 
 IN and NOT IN :
 these keyword checks for the values are in given condition or not
-select * from actor where first_name IN ('Chris','Johnny','Julia');
+eg. select * from actor where first_name IN ('Chris','Johnny','Julia');
 
 select * from actor where first_name not IN ('Chris','Johnny','Julia');
 
 DISINCT: this will only display distinct itmes from a column
-select DISTINCT column from table.
+eg. select DISTINCT column from table.
+
+LIMIT : this is used to limit the no. of rows returned by select query.
+
+eg. select * from COMPANY limit 3;
+offset is also used with limit. offset means limiting from a perticular offset.
+
+eg. select * from COMPANY limit 3 offset 2;
+
 
 
