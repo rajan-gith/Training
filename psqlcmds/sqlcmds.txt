@@ -116,3 +116,18 @@ check: checks the condition.
 
 create table department(id int primary key not null,dept char(50) not null, emp_id int, foreign key (emp_id) references company (idd
 ));
+
+JOINS: Joins clause is used to combine records from two or more tables in a database. A JOIN is a means for combining fields from two tables by using values common to each. 
+
+types of joins:
+Cross join, Inner join, Left outer join, Right outer join full outer join.
+
+CROSS JOIN: SELECT ... FROM table1 CROSS JOIN table2 ...
+
+Inner join:SELECT table1.column1,table2.column2 FROM table1 INNER JOIN table2 ON table1.common_filed = table2.common_field;
+
+Left outer join: SELECT ... FROM table1 LEFT OUTER JOIN table2 ON conditional_expression ...
+
+Right outer join :SELECT ... FROM table1 RIGHT OUTER JOIN table2 ON conditional_expression ...
+
+full outer join : SELECT ... FROM table1 FULL OUTER JOIN table2 ON conditional_expression ...
