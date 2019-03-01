@@ -9,5 +9,5 @@ Queries for creating shop database.
 	name CHAR(50) NOT NULL,
 	price INT NOT NULL,
 	supplier_id INT NOT NULL,
-	CONSTRAINT item_pkey (id)
+	CONSTRAINT item_pkey PRIMARY KEY (id)
 );'
