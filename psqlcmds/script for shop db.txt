@@ -37,3 +37,22 @@ Queries for creating shop database.
 	date DATE DEFAULT CURRENT_DATE,
 	CONSTRAINT payment_c_fkey FOREIGN KEY(customer_id) REFERENCES customers(id)
 );'
+
+6.Adding table for suppliers.
+'CREATE TABLE suppliers(
+	supplier_id SERIAL NOT NULL,
+	supplier_name CHAR(50),
+	address VARCHAR(50),
+	CONSTRAINT supplier_pkey PRIMARY KEY (supplier_id)
+);'
+
+7.Adding Table for suppliers_order.
+'CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed');
+ CREATE TABLE supplier_order(
+	s_o_id SERIAL NOT NULL,
+	suppliers_id INT NOT NULL,
+	items_id INT NOT NULL,
+	status STATS NOT NULL DEFAULT 'pending',
+	CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),
+	CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id)
+);'
