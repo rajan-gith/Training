@@ -80,3 +80,5 @@ Now some queries :
 2. retrieving customers name, purchased items and their quantity from 
 'select customers.name,items.name, shopping.quantity from customers join shopping on customers.id=shopping.customer_id inner join items on items.id=shopping.items_id;'
 
+3. retrieving supplier name, items name and items status
+'select suppliers.supplier_name,items.name ,supplier_order.status from supplier_order join suppliers on supplier_order.supplier_id=suppliers.supplier_id join items on items.supplier_id=suppliers.supplier_id;'
