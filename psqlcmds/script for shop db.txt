@@ -50,9 +50,18 @@ Queries for creating shop database.
 'CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed');
  CREATE TABLE supplier_order(
 	s_o_id SERIAL NOT NULL,
-	suppliers_id INT NOT NULL,
+	supplier_id INT NOT NULL,
 	items_id INT NOT NULL,
 	status STATS NOT NULL DEFAULT 'pending',
 	CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),
 	CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id)
 );'
+
+8.Adding foreign key constraint to items table.
+'ALTER TABLE items ADD CONSTRAINT supplier_fkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id);'
+
+9:Altering customer name to not null.
+'ALTER TABLE customers ALTER COLUMN name set NOT NULL;'
+
+10.Altering customer address to not null.
+'ALTER TABLE customers ALTER COLUMN address set NOT NULL;'
