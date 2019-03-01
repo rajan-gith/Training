@@ -28,3 +28,12 @@ Queries for creating shop database.
 	CONSTRAINT customer_fkey FOREIGN KEY(customer_id) REFERENCES customers(id),
 	CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id)
 );'
+
+5.Creating payment Table.
+'CREATE TABLE payment(
+	payment_id SERIAL NOT NULL,
+	customer_id INT NOT NULL,
+	amount INT NOT NULL,
+	date DATE DEFAULT CURRENT_DATE,
+	CONSTRAINT payment_c_fkey FOREIGN KEY(customer_id) REFERENCES customers(id)
+);'
