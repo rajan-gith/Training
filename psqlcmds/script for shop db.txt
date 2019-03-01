@@ -11,3 +11,11 @@ Queries for creating shop database.
 	supplier_id INT NOT NULL,
 	CONSTRAINT item_pkey PRIMARY KEY (id)
 );'
+
+3.Creating Customers Table.
+'CREATE TABLE customers(
+	id SERIAL NOT NULL,
+	name CHAR(50),
+	address varchar(50),
+	CONSTRAINT customer_pkey PRIMARY KEY (id)
+);'
