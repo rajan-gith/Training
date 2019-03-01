@@ -70,3 +70,13 @@ Queries for creating shop database.
 'ALTER TABLE shopping ALTER COLUMN customer_id set NOT NULL;'
 'ALTER TABLE shopping ALTER COLUMN items_id set NOT NULL;'
 'ALTER TABLE shopping ALTER COLUMN quantity set NOT NULL;'
+
+
+
+Now some queries :
+1. retrieving customer name and payment made by them 
+'select payment.amount , customers.name from customers inner join payment on customers.id=payment.customer_id;'
+
+2. retrieving customers name, purchased items and their quantity from 
+'select customers.name,items.name, shopping.quantity from customers join shopping on customers.id=shopping.customer_id inner join items on items.id=shopping.items_id;'
+
