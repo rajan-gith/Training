@@ -3,3 +3,11 @@ Queries for creating shop database.
 1.Create database 
 'CREATE DATABASE shopdb;'
 
+2.Creating Items Table.
+'CREATE TABLE items(
+	id SERIAL NOT NULL,
+	name CHAR(50) NOT NULL,
+	price INT NOT NULL,
+	supplier_id INT NOT NULL,
+	CONSTRAINT item_pkey (id)
+);'
