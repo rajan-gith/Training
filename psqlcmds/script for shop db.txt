@@ -65,3 +65,8 @@ Queries for creating shop database.
 
 10.Altering customer address to not null.
 'ALTER TABLE customers ALTER COLUMN address set NOT NULL;'
+
+10.Altering shopping table not null.
+'ALTER TABLE shopping ALTER COLUMN customer_id set NOT NULL;'
+'ALTER TABLE shopping ALTER COLUMN items_id set NOT NULL;'
+'ALTER TABLE shopping ALTER COLUMN quantity set NOT NULL;'
