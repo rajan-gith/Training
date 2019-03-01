@@ -52,8 +52,8 @@ SET default_with_oids = false;
 
 CREATE TABLE public.customers (
     id integer NOT NULL,
-    name character(50) NOT NULL,
-    address character varying(50) NOT NULL
+    name character(30) NOT NULL,
+    address character varying(30) NOT NULL
 );
 
 
@@ -277,6 +277,26 @@ ALTER TABLE ONLY public.suppliers ALTER COLUMN supplier_id SET DEFAULT nextval('
 --
 
 COPY public.customers (id, name, address) FROM stdin;
+1	Jack                          	california
+2	Jackie chan                   	capstone
+3	Mr chang                      	capstone2
+4	Jai kishan                    	India
+5	Akshay                        	Mumbai
+6	Rahul                         	Delhi
+7	Raj                           	Haryana
+8	Mona lisa                     	california
+9	Bruce wayne                   	Gotham
+10	Batman                        	Gotham
+11	Super man                     	Krypton
+12	Iron man                      	New york
+13	Captain America               	Brooklyn
+14	Spider man                    	Queens
+15	Robert Downey Jr              	America
+16	Rock                          	Miami 
+17	Chris Evans                   	Australia
+18	Chris Hemsworth               	Australia
+19	Tom hiddelstone               	Asguard
+20	Sherlock Holmes               	Baker Street
 \.
 
 
@@ -285,6 +305,19 @@ COPY public.customers (id, name, address) FROM stdin;
 --
 
 COPY public.items (id, name, price, supplier_id) FROM stdin;
+1	item1                                             	300	1
+2	item2                                             	400	2
+3	item3                                             	344	3
+4	item4                                             	230	4
+5	item5                                             	250	5
+6	item6                                             	100	6
+7	item7                                             	1000	7
+8	item8                                             	122	8
+9	item9                                             	976	9
+10	item10                                            	400	10
+11	item11                                            	456	1
+12	item12                                            	345	2
+13	item13                                            	670	3
 \.
 
 
@@ -293,6 +326,20 @@ COPY public.items (id, name, price, supplier_id) FROM stdin;
 --
 
 COPY public.payment (payment_id, customer_id, amount, date) FROM stdin;
+1	1	500	2019-03-01
+2	2	400	2019-03-01
+3	5	600	2019-03-01
+4	4	333	2019-03-01
+5	3	332	2019-03-01
+6	1	666	2019-03-01
+7	2	99	2019-03-01
+8	2	59	2019-03-01
+9	2	450	2019-03-01
+10	1	320	2019-03-01
+11	3	420	2019-03-01
+12	3	500	2019-03-01
+13	5	1000	2019-03-01
+14	7	100	2019-03-01
 \.
 
 
@@ -301,6 +348,22 @@ COPY public.payment (payment_id, customer_id, amount, date) FROM stdin;
 --
 
 COPY public.shopping (customer_id, items_id, quantity) FROM stdin;
+1	2	2
+2	3	2
+3	4	2
+4	5	2
+4	6	4
+5	7	4
+6	7	4
+7	6	1
+8	5	1
+9	4	1
+7	5	3
+5	3	3
+6	3	3
+2	2	2
+1	1	2
+3	9	2
 \.
 
 
@@ -309,6 +372,16 @@ COPY public.shopping (customer_id, items_id, quantity) FROM stdin;
 --
 
 COPY public.supplier_order (s_o_id, supplier_id, items_id, status) FROM stdin;
+1	1	1	pending
+2	2	4	accepted
+3	3	3	accepted
+4	3	5	accepted
+5	4	6	accepted
+6	5	7	pending
+7	6	8	pending
+8	7	9	pending
+9	8	10	completed
+10	9	9	completed
 \.
 
 
@@ -317,6 +390,16 @@ COPY public.supplier_order (s_o_id, supplier_id, items_id, status) FROM stdin;
 --
 
 COPY public.suppliers (supplier_id, supplier_name, address) FROM stdin;
+1	John                                              	add1
+2	Wick                                              	add2
+3	Nelson                                            	add3
+4	Hank                                              	add4
+5	Tars                                              	black hole st
+6	case                                              	black hole st
+7	Matt                                              	dead station
+8	Anne                                              	dead station
+9	Cooper                                            	alive beach
+10	christopher Nolen                                 	East block
 \.
 
 
@@ -324,35 +407,35 @@ COPY public.suppliers (supplier_id, supplier_name, address) FROM stdin;
 -- Name: customers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.customers_id_seq', 1, false);
+SELECT pg_catalog.setval('public.customers_id_seq', 20, true);
 
 
 --
 -- Name: items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.items_id_seq', 1, false);
+SELECT pg_catalog.setval('public.items_id_seq', 13, true);
 
 
 --
 -- Name: payment_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.payment_payment_id_seq', 1, false);
+SELECT pg_catalog.setval('public.payment_payment_id_seq', 14, true);
 
 
 --
 -- Name: supplier_order_s_o_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.supplier_order_s_o_id_seq', 1, false);
+SELECT pg_catalog.setval('public.supplier_order_s_o_id_seq', 10, true);
 
 
 --
 -- Name: suppliers_supplier_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.suppliers_supplier_id_seq', 1, false);
+SELECT pg_catalog.setval('public.suppliers_supplier_id_seq', 10, true);
 
 
 --
