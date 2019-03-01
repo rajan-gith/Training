@@ -19,3 +19,12 @@ Queries for creating shop database.
 	address varchar(50),
 	CONSTRAINT customer_pkey PRIMARY KEY (id)
 );'
+
+4.Creating shopping Table.
+'CREATE TABLE shopping(
+	customer_id INT,
+	items_id INT,
+	quantity INT,
+	CONSTRAINT customer_fkey FOREIGN KEY(customer_id) REFERENCES customers(id),
+	CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id)
+);'
