@@ -71,8 +71,6 @@ Queries for creating shop database.
 'ALTER TABLE shopping ALTER COLUMN items_id set NOT NULL;'
 'ALTER TABLE shopping ALTER COLUMN quantity set NOT NULL;'
 
-
-
 Now some queries :
 1. retrieving customer name and payment made by them 
 'select payment.amount , customers.name from customers inner join payment on customers.id=payment.customer_id;'
@@ -82,3 +80,18 @@ Now some queries :
 
 3. retrieving supplier name, items name and items status
 'select suppliers.supplier_name,items.name ,supplier_order.status from supplier_order join suppliers on supplier_order.supplier_id=suppliers.supplier_id join items on items.supplier_id=suppliers.supplier_id;'
+
+Alter table supplier_order rename column s_o_id to stock_order_id;
+
+Alter table supplier_order rename to inventory_orders;
+
+Alter table inventory_orders rename column stock_order_id to inventory_order_id;
+
+Alter table inventory_orders rename column inventory_order_id to inventory_id; 
+
+Alter table shopping add column payment_id int; 
+
+Alter table payment add constraint payment_pkey primary key (payment_id);    
+
+
+Alter table shopping add constraint payment_fkey Foreign key(payment_id) references payment(payment_id);
