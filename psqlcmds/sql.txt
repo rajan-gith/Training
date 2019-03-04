@@ -110,3 +110,19 @@ select customer.first_name from customer inner join payment on customer.customer
 select store_id,count(customer_id) from customer group by store_id having count(customer_id) > 200;
 
 select film.title,category.name,film.release_year from film join film_category on film.film_id=film_category.film_id join category on film_category.category_id=category.category_id;
+
+select customer.customer_id,customer.first_name,payment.amount,rental.rental_date from customer join rental on customer.customer_id
+=rental.customer_id join payment on payment.rental_id=rental.rental_id;
+
+
+select customer.customer_id,customer.first_name,payment.amount,rental.rental_date from customer join rental on customer.customer_id
+=rental.customer_id join payment on payment.rental_id=rental.rental_id;
+
+
+
+
+
+select customer.customer_id,customer.first_name,sum(payment.amount) from customer join rental on customer.customer_id = rental.customer_id join payment on payment.rental_id=rental.rental_id group by customer.customer_id,customer.first_name;
+
+
+select first_name from customer where customer_id not in (select distinct(customer_id) from payment);
