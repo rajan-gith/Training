@@ -93,3 +93,13 @@ select count(first_name) from actor group by first_name;
 select count(distinct(first_name)) from actor;
 #returning distinct name from actors
 select distinct(first_name) from actor;
+
+
+
+select id as unique_id from contacts;
+
+#left join customers table and contacts.
+select * from customers left join contacts using(id);
+
+#right join customers table and contacts.
+select * from customers right join contacts using(id);
