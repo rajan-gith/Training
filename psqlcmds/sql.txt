@@ -6,23 +6,31 @@
 
 drop table b11;
 drop table a11;
-
+#listing all actors detail from actor table
 select * from actor;
 
+#listing details of actors whom last name should be (Chase ,wood and swank)
 select * from actor where last_name in ('Chase','Wood','Swank');
 
+#now listing all details of actor whom last name are not from (chase,wood and swank)
 select count(*) from actor where last_name not in ('Chase','Wood','Swank');
 
+#returning no. of rows which are from list
 select count(*) from actor where last_name in ('Chase','Wood','Swank');
 
+#returning total no. of rows
 select count(*) from actor; 
 
+#returning unique name from actor.
 select distinct(first_name) from actor;
 
+#returning unique first name from actor limiting by 10.
 select distinct(first_name) from actor limit 10;
 
+#returning unique first name from actor limiting by 20 with decending order.
 select distinct(first_name) from actor order by first_name desc limit 20;
 
+#returning unique last name from actor limiting by 20 with decending order.
 select distinct(last_name) from actor order by last_name desc  limit 20;
 
 select actor_id, first_name,last_name from actor where actor_id>177;
@@ -39,7 +47,49 @@ select actor_id, first_name,last_name from actor where first_name='Tom' and last
 
 select actor_id, first_name,last_name from actor where actor_id <40 fetch first 40 rows only;
 
+# adding new table to the database.
 create table contacts (id smallserial not null,contact_no char(10), postal_address varchar(30));
 
+
+# altering contacts adding constraint from customers as foreign key referencing to the customer table
 alter table contacts add constraint c_fkey foreign key(id) references customers(id);
 
+
+#retrieving contacts where postal address is null
+select * from contacts where postal_address is null;
+
+selecting customers where id is between 12 and 30
+select * from customers where id between 12 and 30;
+
+#inner joining customers with contact with help of USING keyword
+select * from customers inner join contacts using(id);
+
+#inner joining contacts and customers where postal address is not null
+select * from customers inner join contacts using(id) where contacts.postal_address is not null;
+
+#inserting value in shopping table
+insert into shopping(customer_id,items_id,quantity,payment_id) values (3,2,2,15),(3,1,4,16),(4,5,1,17),(8,3,2,18)
+
+#updating contacts setting postal addres as hood where customer is having id as 1. 
+update contacts set postal_address='hood' where id =1;
+
+#retrieving the customers from customers table where custmer's postal address is not null. 
+select * from customers inner join contacts using(id) where contacts.postal_address is not null;
+
+'\! clear'  to clear the console.
+
+#retrieving the list of customer who are also in contact-form database.
+select * from customers where id in (select id from contacts );
+
+#selecting second highes price from list.
+select name as second_highest, price as rate from items where price=( select max(price) from items wher
+e price not in (select max(price) from items));
+
+
+#returning no. of times a name is repeated.
+select count(first_name) from actor group by first_name;
+
+#returning total no. of actors whom first_name arnot repeated.
+select count(distinct(first_name)) from actor;
+#returning distinct name from actors
+select distinct(first_name) from actor;
