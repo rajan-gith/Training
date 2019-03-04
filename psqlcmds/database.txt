@@ -1,0 +1,449 @@
+***NOTE ***
+ALL THESE CMDS are my psql history cmds that I have been ran in psql shell. so some of these cmds are full of errors.
+***NOTE *** 
+
+_HiStOrY_V2_
+SELECT version();
+CREATE DATABASE dvdrental;
+pg_restore -U postgres -d dvdrental ~/Downloads/dvdrental.tar
+\ l
+\ l
+\ c
+\ c dvdrental
+\ d
+\ d actor
+select * from actor SELECT * FROM actor SELECT * FROM public.actor select * from actor;
+select * from actor;
+select count from (select * from actor);
+select count from (select * from actor) as foo;
+select COUNT from (select * from actor) as foo;
+\ c
+\ l
+\ c
+\ c
+\ d
+\ l
+create database dummydb;
+\ l
+\ c dummydb
+drop database dummydb
+\ l
+;
+drop database dummydb;
+\ l
+\ c postgres
+drop database dummydb;
+\ l
+unuse postgres ;
+\ q
+\ l
+\ c javapoint
+\ d
+\ d
+\ l
+\ c postgres
+\ d
+drop table employees ;
+\ c
+\ d
+\ l
+\ c javapoint
+\ d
+CREATE TABLE employees( ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NUL, AGE INT NOT NULL, ADRESS CHAR(50), SALARY REAL, );
+CREATE TABLE employees(                                                                                                             ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NUL, AGE INT NOT NULL, ADRESS CHAR(50), SALARY REAL, )CREATE TABLE employees( ID INT PRIMARY KEY NOT NULLl, NAME TEXT NOT NUL, AGE INT NOT NULL, ADRESS CHAR(50), SALARY REAL, );
+CREATE TABLE employees( ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, AGE INT NOT NULL, ADDRESS CHAR(50), SALARY REAL, );
+CREATE TABLE employees( ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, AGE INT NOT NULL, ADDRESS CHAR(50), SALARY REAL );
+\ C
+\ c
+\ d
+select * from employees  ;
+CREATE SCHEMA myschema;
+INSERT INTO employees"( "ID", "NAME", "AGE", "ADDRESS", "SALARY") VALUES (1, 'Ajeet', 25, 'Mau ', 65000.00 ), (2, 'Rakul', 21, 'Shimla', 85000.00), (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00); select * from employees  ; " ;
+INSERT INTO employees( "ID", "NAME", "AGE", "ADDRESS", "SALARY") VALUES (1, 'Ajeet', 25, 'Mau ', 65000.00 ), (2, 'Rakul', 21, 'Shimla', 85000.00), (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00); select * from employees  ; " ;
+select * from employees ; " ;
+select * from employees ;
+INSERT INTO EMPLOYEES ( "ID", "NAME", "AGE", "ADDRESS", "SALARY") VALUES (1, 'Ajeet', 25, 'Mau ', 65000.00 ), (2, 'Rakul', 21, 'Shimla', 85000.00), (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00);
+INSERT INTO emplyees ( "ID", "NAME", "AGE", "ADDRESS", "SALARY") VALUES (1, 'Ajeet', 25, 'Mau ', 65000.00 ), (2, 'Rakul', 21, 'Shimla', 85000.00), (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00);
+INSERT INTO "EMPLOYEES"(   "ID", "NAME", "AGE", "ADDRESS", "SALARY")   VALUES (1, 'Ajeet', 25, 'Mau ', 65000.00 ), (2, 'Rakul', 21, 'Shimla', 85000.00),    (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00);
+\ d
+INSERT INTO employees values(1,'Ajeet,25,'Mau',65000.00); ' ) ;
+INSERT INTO employees values(1,'Ajeet',25,'Mau',65000.00);
+select * from employees ;
+INSERT INTO employees values (2, 'Rakul', 21, 'Shimla', 85000.00),    (3, 'Manisha', 24, 'Mumbai', 65000.00), (4, 'Larry', 21, 'Paris', 85000.00);
+select * from employees ;
+select id,name,age from employees;
+select ID,name,age from employees;
+select address,ID,name,age from employees;
+update employees set name="mr. ajeet" where id=1;
+update employees set age=24 where id=1;
+select * from employees ;
+update employees set name="John Doe" where id=1;
+update employees set name="John" where id=1;
+update employees set name="Rakul" where id=1;
+update employees set "name"="Rakul" where id=1;
+UPDATE EMPLOYEES SET name=Rakul where id=1;
+UPDATE Employees SET ADDRESS = 'Texas' ;
+select * from employees ;
+UPDATE Employees SET ADDRESS = 'Texas'  where id=3;
+update employees set address='LA' where id = 1;
+select * from employees;
+update employees set name='Lisa A. jr' where id = 1;
+select * from employees;
+delete from employees where id =4;
+select * from employees;
+SELECT *   FROM "EMPLOYEES"   WHERE "SALARY" = '65000'   AND "ID" <= 4;
+select * from "EMPLOYEES";
+select * from EMPLOYEES;
+SELECT *   FROM EMPLOYEES   WHERE "SALARY" = '65000'   AND "ID" <= 4;
+select * from employees where id>1 and salary<100000;
+select name from employees where id>1 and salary<100000;
+select count from employees where id>1 and salary<100000;
+select count(*) from employees where id>1 and salary<100000;
+select max(*) from employees where id>1 and salary<100000;
+insert into employees values=(4,'Larry',21,'Paris',87000);
+insert into employees values(4,'Larry',21,'Paris',87000);
+select * from employees order by id asc;
+\ q
+\ l
+\ c javapoint
+\ d
+\ d employees
+select * from employees ;
+select * from employees ;
+select name from employees ;
+select id from employees ;
+\ d
+\ l
+create database dummydb;
+DROP DATABASE dummydb;
+\ l
+\ l
+\ c dvdrental
+\ d
+select * from actor;
+update actor set first_name='Case' where actor_id=1;
+select * from actor;
+\ q
+\ l
+\ c javapoint
+\ d
+\ d company
+select * from company  ;
+SELECT AGE FROM COMPANY         WHERE EXISTS (SELECT AGE FROM COMPANY WHERE SALARY > 65000);
+select * from COMPANY;
+UPDATE COMPANY SET SALARY = 15000 WHERE ID = 3;
+select * from COMPANY;
+select * from COMPANY limit 3;
+select * from COMPANY limit 3 offset 2;
+select * from company ;
+select * from company where name having count(name)=1;
+select * from company where having count(name)=1;
+select * from company having count(name)=1;
+select * from company group by name having count(name)=1;
+ SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) < 2;
+select * from company group by name;
+select * from company group by name,id;
+select * from company group by name,id,salary;
+update company set salary=20000 where name= 'Teddy';
+select * from company group by name,id,salary;
+select * from company group by salary;
+select * from company group by salary,id;
+select salary from company group by salary,id;
+select salary from company group by salary;
+create table department(id int primary key not null,dept char(50) not null, emp_id int, foreign key (emp_id) references company (id));
+\ d
+\ d department
+\ dt
+\ d company;
+\ d department;
+SELECT * FROM company ;
+SELECT * FROM department ;
+SELECT salary ,name ,dept FROM company INNER JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company INNER JOIN department ON company.id=department.emp_id WHERE salary>15000;
+SELECT salary ,name ,dept FROM department INNER JOIN company ON company.id=department.emp_id WHERE salary>15000;
+SELECT salary ,name ,dept FROM company INNER JOIN company ON company.id=department.emp_id WHERE salary>15000;
+SELECT salary ,name ,dept FROM company,depatment INNER JOIN company ON company.id=department.emp_id WHERE salary>15000;
+SELECT salary ,name ,dept FROM company full outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,company.name ,dept FROM company right outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company INNER JOIN department ON company.id!=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company full outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id UNION SELECT salary ,name ,dept FROM company INNER JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id UNION SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id UNION SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id UNION ALL SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+select max(age) from company ;
+select max(salary) from company ;
+select max(*) from company ;
+select max(join_date) from company ;
+select min(salary) from company ;
+select avg(salary) from company ;
+select sum(salary) from company ;
+select lower(name) from company ;
+select upper(name) from company ;
+select lcase(name) from company ;
+select lcase from company ;
+select arry_agg(*) from company ;
+select arry_agg(name) from company ;
+select array_agg(*) from company ;
+select array_agg(name) from company ;
+select array_agg(salary) from company ;
+create table temp(id int );
+\ d
+ALTER TABLE temp ADD new_column char(10) ;
+\ d temp
+;
+;
+ALTER TABLE temp modify new_column not null ;
+ALTER TABLE temp modify new_column char(10) not null ;
+ALTER TABLE table_name MODIFY column_name datatype NOT NULL;
+ALTER TABLE temp MODIFY new_column datatype NOT NULL;
+ALTER TABLE temp MODIFY new_column char(10) NOT NULL;
+ALTER TABLE temp alter new_column char(10) NOT NULL;
+ALTER TABLE temp alter new_column  NOT NULL;
+ALTER TABLE temp alter new_column NOT NULL;
+ALTER TABLE temp alter new_column constraint NOT NULL;
+\ d temp
+ALTER TABLE temp ALTER new_column char(10) NOT NULL;
+ALTER TABLE temp ALTER new_column char NOT NULL;
+ALTER TABLE temp MODIFY new_column char(10) NOT NULL;
+ALTER TABLE temp ALTER new_column varchar(10) NOT NULL;
+ALTER TABLE temp MODIFY new_column char() NOT NULL;
+ALTER TABLE temp ALTER new_column char() NOT NULL;
+ALTER TABLE temp ALTER new_column NOT NULL;
+ALTER TABLE temp ALTER new_column set NOT NULL;
+ALTER TABLE temp ADD CONSTRAINT FOREIGN KEY (id) REFERENCES company (id);
+ALTER TABLE temp ADD CONSTRAINT fkconstraint FOREIGN KEY (id) REFERENCES company (id);
+ALTER TABLE temp drop CONSTRAINT fkconstraint;
+ALTER TABLE temp drop new_column;
+ALTER TABLE temp drop primary key;
+ALTER TABLE temp drop constraint primary key;
+\ dc
+\ dc -a
+\ dc -a;
+\ d
+\ d temp
+\ d temp \ d+ temp
+\ d+ temp
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id intersect SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id intersect SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id union SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id union SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+SELECT salary ,name ,dept FROM company right outer JOIN department ON company.id=department.emp_id intersect SELECT salary ,name ,dept FROM company left outer JOIN department ON company.id=department.emp_id;
+\ l
+\ c dvdrental
+\ d
+\ da
+\ dt
+select * from customer;
+select first_name,last_name,email from customer;
+select first_name,last_name,email from customer order by first_name desc;
+select first_name,last_name,email from customer order by first_name desc limit 10;
+select first_name,last_name,email from customer order by first_name desc,last_name asc limit 10;
+select distinct(first_name) from customer order by first_name desc,last_name asc limit 10;
+select distinct(first_name) from customer order by first_name desc, limit 10;
+select distinct(first_name) from customer order by first_name desc;
+select first_name as name from customer where count(select first_name from customer)>1;
+select first_name as name from customer where count(select distinct(first_name) from customer)>1;
+select first_name as name from customer where count(select distinct(first_name) from customer)=>1;
+select first_name as name from customer;
+select distinct(first_name) as name from customer;
+SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) < 2;
+SELECT first_NAME FROM Customer GROUP BY name HAVING count(first_name)>1;
+SELECT first_NAME FROM Customer GROUP BY first_name HAVING count(first_name)>1;
+SELECT first_NAME FROM Customer GROUP BY first_name HAVING count(first_name)>2;
+SELECT last_name, first_name FROM customer WHERE first_name = 'Jamie' AND  last_name = 'Rice';
+SELECT customer_id,  amount,  payment_date FROM payment WHERE amount <= 1 OR amount >= 8;
+SELECT     film_id,     title FROM     film ORDER BY     title  FETCH FIRST ROW ONLY;
+SELECT     film_id,     title FROM     film ORDER BY     title  FETCH second ROW ONLY;
+SELECT     film_id,     title FROM     film ORDER BY     title  FETCH last ROW ONLY;
+SELECT     film_id,     title FROM     film ORDER BY     title  FETCH end ROW ONLY;
+\ q
+\ l
+\ c dvdrental
+\ dt
+;
+selct customer_id,payment_id,amount from payment where amount  not between 8 and 9;
+select customer_id,payment_id,amount from payment where amount  not between 8 and 9;
+select customer_id,payment_id,amount from payment where amount  between 8 and 9;
+select customer_id,payment_id,amount from payment where amount  between 8 and 9 sort by customer_id;
+select customer_id,payment_id,amount from payment where amount  between 8 and 9 order by customer_id;
+select count(customer_id,payment_id,amount) from payment where amount  between 8 and 9 order by customer_id;
+select count(customer_id) from payment where amount  between 8 and 9 order by customer_id;
+select count(customer_id) from payment where amount  between 8 and 9 ;
+select count(customer_id) as c from payment where amount  between 8 and 9 ;
+select count(customer_id) c from payment where amount  between 8 and 9 ;
+SELECT     first_name || ' ' || last_name  FROM     customer ORDER BY      first_name || ' ' || last_name;
+select c.first_name || "" || c.lastname full name , p.amount from customer c inner join payment p on c.customer_id=p.custome_id;
+select c.first_name,c.lastname full name , p.amount from customer c inner join payment p on c.customer_id=p.custome_id;
+select c.first_name,c.lastname as full name , p.amount from customer c inner join payment p on c.customer_id=p.custome_id;
+select c.first_name,c.lastname , p.amount from customer c inner join payment p on c.customer_id=p.custome_id;
+select c.first_name,c.lastname , p.amount from customer c inner join payment p on c.customer_id="p.custome_id";
+select c.first_name,c.lastname , p.amount from customer c inner join payment p on "c.customer_id"="p.custome_id";
+select c.first_name,c.lastname , p.amount from customer c inner join payment p on custome.customer_id=payment.custome_id;
+select c.first_name,c.lastname , p.amount from customer c inner join payment p on customer.customer_id=payment.custome_id;
+select first_name,lastname , amount from customer  inner join payment  on customer.customer_id=payment.custome_id;
+select first_name,lastname , amount from customer  inner join payment  on cpayment.custome_id=customer.customer_id;
+select first_name,lastname , amount from customer inner join payment  on payment.custome_id=customer.customer_id;
+select first_name,lastname , amount from customer inner join payment  on payment.custome_id=customer.customer_id;
+select first_name,lastname , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+select first_name,last_name , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+select first_name as f,last_name , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+select first_name || "" || last_name full _name , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+select first_name || " " || last_name full _name , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+select first_name ,last_name  , amount from customer inner join payment  on payment.customer_id=customer.customer_id;
+\ dt
+\ d actor;
+\ d filmactor;
+\ d film_actor;
+\ lt
+\ l
+\ lt dvdrental ;
+\ d+
+create table a11(id int primary key);
+\ d a11
+create table b11(id int foreign key(id) refernces a11(id) );
+create table b11(id int fk foreign key(id) refernces a11(id) );
+create table b11(id int foreign key(id) references a11(id) );
+create table b11(id int fk foreign key(id) references a11(id) );
+create table b11(id int foreign key(id) references a11(id) );
+create table b11(id int, foreign key(id) references a11(id) );
+create table b11(id int ,fk foreign key(id) references a11(id) );
+create table b11(id int ,foreign key(id) references a11(id) );
+\ d+ b11
+\ d b11
+alter 2 3 4 5 6 7 8 9 10 11 12 13 SELECT  customer.customer_id,  customer.first_name customer_first_name,  customer.last_name customer_last_name,  customer.email,  staff.first_name staff_first_name,  staff.last_name staff_last_name,  amount,  payment_date FROM  customer INNER JOIN payment ON payment.customer_id = customer.customer_id INNER JOIN staff ON payment.staff_id = staff.staff_id;
+alter 2 3 4 5 6 7 8 9 10 11 12 13 SELECT  customer.customer_id,  customer.first_name customer_first_name,  customer.last_name customer_last_name,  customer.email,  staff.first_name staff_first_name,  staff.last_name staff_last_name,  amount,  payment_date FROM  customer INNER JOIN payment ON payment.customer_id = customer.customer_id INNER JOIN staff ON payment.staff_id = staff.staff_id;
+;
+;
+2 3 4 5 6 7 8 9 10 11 12 13 SELECT  customer.customer_id,  customer.first_name customer_first_name,  customer.last_name customer_last_name,  customer.email,  staff.first_name staff_first_name,  staff.last_name staff_last_name,  amount,  payment_date FROM  customer INNER JOIN payment ON payment.customer_id = customer.customer_id INNER JOIN staff ON payment.staff_id = staff.staff_id;
+SELECT  customer.customer_id,  customer.first_name customer_first_name,  customer.last_name customer_last_name,  customer.email,  staff.first_name staff_first_name,  staff.last_name staff_last_name,  amount,  payment_date FROM  customer INNER JOIN payment ON payment.customer_id = customer.customer_id INNER JOIN staff ON payment.staff_id = staff.staff_id;
+\ dt
+\ d basket_a
+\ d basket_b
+select * from basket_a full join basket_b on basket_a.key=basket_b where basket_a is not null;
+select * from basket_a full join basket_b on basket_a.id=basket_b.id where basket_a.id is not null;
+select * from basket_a full join basket_b on basket_a.id=basket_b.id where basket_a.id is null;
+select * from basket_a full join basket_b on basket_a.id=basket_b.id where basket_a.id is null or basket;
+select * from basket_a full join basket_b on basket_a.id=basket_b.id where basket_a.id is null or basket_b.id=null;
+select * from basket_a join basket_b on basket_a.id=basket_b.id;
+select * from basket_a full join basket_b on basket_a.id=basket_b.id;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is null or basket_b.id=null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is null and basket_b.id=null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_b.id=null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.fruit is null or basket_b.fruit=null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is null or basket_b.id is null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is null and basket_b.id is null;
+select * from basket_a full join basket_b on basket_a.fruit=basket_b.fruit where basket_a.id is not null and basket_b.id is not null;
+createdb library;
+createdb library;
+\ l
+CREATE DATABASE shopdb;
+\ l
+\ c shopdb
+CREATE TABLE items(  id SERIAL NOT NULL,  name CHAR(50) NOT NULL,  price INT NOT NULL,  supplier_id INT NOT NULL,  CONSTRAINT item_pkey (id) );
+CREATE TABLE items(  id SERIAL NOT NULL,  name CHAR(50) NOT NULL,  price INT NOT NULL,  supplier_id INT NOT NULL,  CONSTRAINT item_pkey PRIMARY KEY (id) );
+CREATE TABLE customers(  id SERIAL NOT NULL,  name CHAR(50),  address varchar(50),  CONSTRAINT customer_pkey PRIMARY KEY (id) );
+'CREATE TABLE shopping(  customer_id INT,  items_id INT,  quantity INT,  CONSTRAINT customer_fkey FOREIGN KEY(customer_id) REFERENCES customer(id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) ); ; ; ' ;
+CREATE TABLE shopping(  customer_id INT,  items_id INT,  quantity INT,  CONSTRAINT customer_fkey FOREIGN KEY(customer_id) REFERENCES customer(id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+CREATE TABLE shopping(  customer_id INT,  items_id INT,  quantity INT,  CONSTRAINT customer_fkey FOREIGN KEY(customer_id) REFERENCES customers(id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+CREATE TABLE payment(  payment_id SERIAL NOT NULL,  customer_id INT NOT NULL,  amount INT NOT NULL,  date DATE DEFAULT CURRENT_DATE  CONSTRAINT payment_c_fkey FOREIGN KEY(customer_id) REFERENCES customers(id) );
+CREATE TABLE payment(  payment_id SERIAL NOT NULL,  customer_id INT NOT NULL,  amount INT NOT NULL,  date DATE DEFAULT CURRENT_DATE  CONSTRAINT payment_c_fkey FOREIGN KEY (customer_id) REFERENCES customers(id) );
+CREATE TABLE payment(  payment_id SERIAL NOT NULL,  customer_id INT NOT NULL,  amount INT NOT NULL,  date DATE DEFAULT CURRENT_DATE,  CONSTRAINT payment_c_fkey FOREIGN KEY (customer_id) REFERENCES customers(id) );
+\ dt
+CREATE TABLE suppliers(  supplier_id SERIAL NOT NULL,  supplier_name CHAR(50),  address VARCHAR(50),  CONSTRAINT supplier_pkey PRIMARY KEY (supplier_id) );
+CREATE TABLE supplier_order(  s_o_id SERIAL NOT NULL,  suppliers_id INT NOT NULL,  items_id INT NOT NULL,  status ENUM ('accepted', 'pending', 'completed'),  CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed')  CREATE TABLE supplier_order(  s_o_id SERIAL NOT NULL,  suppliers_id INT NOT NULL,  items_id INT NOT NULL,  status STAT NOT NULL DEFAULT 'pending',  CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );;
+CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed');
+ CREATE TABLE supplier_order(  s_o_id SERIAL NOT NULL,  suppliers_id INT NOT NULL,  items_id INT NOT NULL,  status STAT NOT NULL DEFAULT 'pending',  CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed');
+ CREATE TABLE supplier_order(  s_o_id SERIAL NOT NULL,  suppliers_id INT NOT NULL,  items_id INT NOT NULL,  status STATS NOT NULL DEFAULT 'pending',  CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+CREATE TYPE STATS AS ENUM('accepted', 'pending', 'completed');
+ CREATE TABLE supplier_order(  s_o_id SERIAL NOT NULL,  supplier_id INT NOT NULL,  items_id INT NOT NULL,  status STATS NOT NULL DEFAULT 'pending',  CONSTRAINT supplier_o_pkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),  CONSTRAINT items_fkey FOREIGN KEY(items_id) REFERENCES items(id) );
+\ dt
+\ d customers
+\ d items
+ALTER TABLE items ADD CONSTRAINT supplier_fkey(supplier_id) REFERENCES suppliers(supplier_id);
+ALTER TABLE items ADD CONSTRAINT supplier_fkey items (supplier_id) REFERENCES suppliers(supplier_id);
+ALTER TABLE items ADD CONSTRAINT supplier_fkey FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id);
+ALTER TABLE customers ADD CONSTRAINT not_null NOT NULL (id);
+ALTER TABLE customers ADD CONSTRAINT NOT NULL (id);
+ALTER TABLE customers ALTER COLUMN id serial NOT NULL;
+ALTER TABLE customers ALTER COLUMN id integer NOT NULL;
+ALTER TABLE customers ALTER COLUMN id set NOT NULL;
+ALTER TABLE customers ALTER COLUMN name set NOT NULL;
+ALTER TABLE customers ALTER COLUMN address set NOT NULL;
+ALTER TABLE shopping ALTER COLUMN customer_id set NOT NULL;
+ALTER TABLE shopping ALTER COLUMN item_id set NOT NULL;
+ALTER TABLE shopping ALTER COLUMN items_id set NOT NULL;
+ALTER TABLE shopping ALTER COLUMN quantity set NOT NULL;
+\ d+
+\ dt
+pg_dump_all > shop.sql
+\ q
+pg_dump_all -fc shopdb > shop.sql ;
+dump_all -fc shopdb > shop.sql ;
+pg_dump -fc shopdb > shop.sql ;
+\ q
+\ l
+\ c shopdb
+\ t
+\ t
+\ d
+\ dt
+select payment.amount , customers.name from customers inner join payment on customers.id=payment.customer_id;
+select customers.name,items.name, shopping.quantity,from customers join shopping on customers.id=shopping.customer_id inner join items on items.id=shopping.items_id;
+select customers.name,items.name, shopping.quantity from customers join shopping on customers.id=shopping.customer_id inner join items on items.id=shopping.items_id;
+\ d suppliers
+select suplliers.supplier_name,items.name ,supplier_order.status from supplier_order join suppliers on supplier_order.supplier_id=suppliers.supplier_id join items on items.id=supplier_order.item_id;
+select suppliers.supplier_name,items.name ,supplier_order.status from supplier_order join suppliers on supplier_order.supplier_id=suppliers.supplier_id join items on items.id=supplier_order.item_id;
+\ q
+\ c
+\ l
+\ c shopdb
+\ dt
+\ d supplier_order
+Alter table supplier_order rename column s_o_id to stock_order_id;
+Alter table supplier_order rename to inventory_orders;
+Alter table supplier_order rename column s_o_id to inventory_order_id;
+Alter table inventory_orders rename column s_o_id to inventory_order_id;
+Alter table inventory_orders rename column stock_order_id to inventory_order_id;
+Alter table inventory_orders rename column inventory_order_id to inventory_id;
+Alter table shopping add column payment_id int, constraint payment_fkey Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add column payment_id int,Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add column payment_id int constraint payment_fkey Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add column payment_id int constraint Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add column payment_id int;
+Alter table shopping add constraint Foreign key(payment_id) references payment(payment_id);
+Alter table shopping constraint Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add constraint Foreign key(payment_id) references payment(payment_id);
+Alter table shopping add constraint payment_fkey Foreign key(payment_id) references payment(payment_id);
+\ dt
+\ d payment
+Alter table payment add constraint payment_pkey primary key (payment_id);
+Alter table shopping add constraint payment_fkey Foreign key(payment_id) references payment(payment_id);
+select * from shopping ;
+select * from payment;
+alter table shopping add constraint customer_payment_fkey foreign key(customer_id,payment_id) payment (payment_id,customer_id);
+alter table shopping add constraint customer_payment_fkey foreign key(customer_id,payment_id) payment(payment_id,customer_id);
+alter table shopping add constraint customer_payment_fkey foreign key(customer_id,payment_id) references  payment(payment_id,customer_id);
+alter table payment add constraint unique(payment_id,customer_id);
+alter table payment add constraint unique_pay unique(payment_id,customer_id);
+alter table shopping add constraint customer_payment_fkey foreign key(customer_id,payment_id) references  payment(payment_id,customer_id);
+\ q
+\ l
+\ dt
+\ c shopdb
+\ dt
+\ d customer
+\ d customers
+\ d customers
+\ d customers_id_seq
+\ q
