@@ -119,10 +119,17 @@ select customer.customer_id,customer.first_name,payment.amount,rental.rental_dat
 =rental.customer_id join payment on payment.rental_id=rental.rental_id;
 
 
-
-
-
+# retrieving customers details who rented dvds from store
 select customer.customer_id,customer.first_name,sum(payment.amount) from customer join rental on customer.customer_id = rental.customer_id join payment on payment.rental_id=rental.rental_id group by customer.customer_id,customer.first_name;
 
 
+#as expected returns zero.
 select first_name from customer where customer_id not in (select distinct(customer_id) from payment);
+
+
+# retrieving total no. of dvd's rented by each of the staff
+select rental.staff_id ,count(rental.rental_id) from rental inner join staff on staff.staff_id=rental.staff_id group by rental.staff_id ;
+
+
+#retrieving customer name and country name from records(customer =>,address =>,city =>,country) used three joins on four tables.
+select customer.first_name, country.country from customer join address on address.address_id=customer.address_id join city on address.city_id=city.city_id join country on country.country_id=city.country_id;
