@@ -1,0 +1,39 @@
+
+\l
+\c dvdrental
+\dt
+
+
+drop table b11;
+drop table a11;
+
+select * from actor;
+
+select * from actor where last_name in ('Chase','Wood','Swank');
+
+select count(*) from actor where last_name not in ('Chase','Wood','Swank');
+
+select count(*) from actor where last_name in ('Chase','Wood','Swank');
+
+select count(*) from actor; 
+
+select distinct(first_name) from actor;
+
+select distinct(first_name) from actor limit 10;
+
+select distinct(first_name) from actor order by first_name desc limit 20;
+
+select distinct(last_name) from actor order by last_name desc  limit 20;
+
+select actor_id, first_name,last_name from actor where actor_id>177;
+
+select actor_id, first_name,last_name from actor where first_name='Johnny';
+
+select actor_id, first_name,last_name from actor where first_name like '%d';
+
+select actor_id, first_name,last_name from actor where actor_id !=40;
+
+select actor_id, first_name,last_name from actor where first_name=last_name;
+
+select actor_id, first_name,last_name from actor where first_name='Tom' and last_name='Miranda';
+
