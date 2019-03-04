@@ -103,3 +103,6 @@ select * from customers left join contacts using(id);
 
 #right join customers table and contacts.
 select * from customers right join contacts using(id);
+
+#retrieving customer's name from customer table who have been paid much more than 150 usd.
+select customer.first_name from customer inner join payment on customer.customer_id=payment.customer_id group by payment.customer_id,customer.first_name having SUM (payment.amount) > 20*5+50;
