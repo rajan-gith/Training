@@ -37,3 +37,9 @@ select actor_id, first_name,last_name from actor where first_name=last_name;
 
 select actor_id, first_name,last_name from actor where first_name='Tom' and last_name='Miranda';
 
+select actor_id, first_name,last_name from actor where actor_id <40 fetch first 40 rows only;
+
+create table contacts (id smallserial not null,contact_no char(10), postal_address varchar(30));
+
+alter table contacts add constraint c_fkey foreign key(id) references customers(id);
+
