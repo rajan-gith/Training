@@ -130,6 +130,7 @@ select first_name from customer where customer_id not in (select distinct(custom
 # retrieving total no. of dvd's rented by each of the staff
 select rental.staff_id ,count(rental.rental_id) from rental inner join staff on staff.staff_id=rental.staff_id group by rental.staff_id ;
 
+select * from country;
 
 #retrieving customer name and country name from records(customer =>,address =>,city =>,country) used three joins on four tables.
 select customer.first_name, country.country from customer join address on address.address_id=customer.address_id join city on address.city_id=city.city_id join country on country.country_id=city.country_id;

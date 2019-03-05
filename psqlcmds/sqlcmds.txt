@@ -36,7 +36,7 @@ ID INT PRIMARY KEY NOT NULL,
 NAME TEXT NOT NULL,
 AGE INT NOT NULL,
 ADDRESS CHAR(50),
-SALARY REAL,
+SALARY REAL
 );   
 
 To  Drop a table we use:
@@ -51,7 +51,7 @@ SELECT:
 [SELECT column1,column2,column3 FROM table_name; ]
 select * from actor;
 
-INSTER:
+INSERT:
 [INSERT INTO table_name (column1,column2,column3,column4) VALUES (value1,value2,value3,value4);]
 Insert into actor (actor_id,first_name,last_name) values(201,'Robert','Downey Jr');
 
