@@ -1,6 +1,6 @@
 class Customer
 	@@no_of_customers = 0
-	def initialize(id = 0,name = '',age = 0)
+	def initialize(id = nil,name = nil,age = nil)
 		@customer_id = id	
 		@customer_name = name
 		@customer_age = age
