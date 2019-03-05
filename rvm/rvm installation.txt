@@ -1,0 +1,26 @@
+installing GPG keys
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+Installing stable release version
+
+1564  curl -sSL https://get.rvm.io | bash -s stable
+
+Activating rvm 
+
+1566  source ~/.rvm/scripts/rvm
+
+Using rvm to install ruby 
+1567  rvm install 2.5.1
+1568  rvm install 2.6.0
+
+using a perticular version as default 
+1569  rvm use 2.6.0 --default
+
+show list of installed ruby
+rvm list
+
+show current version of rvm
+rvm -v
+
+shows current version of ruby
+ruby -v
