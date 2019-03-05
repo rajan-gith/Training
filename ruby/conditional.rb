@@ -1,5 +1,5 @@
-a = 3
-b = 2
+a = 2
+b = 3
 if a == 2 and b ==3
 	puts(" a is #{a} and b is #{b}")
 elsif a ==2 or b ==3
