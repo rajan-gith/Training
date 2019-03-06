@@ -1,0 +1,28 @@
+Learning Ruby
+
+Ruby Data Types:
+	Booleans
+	Symbols
+	Numbers
+	String 
+	Arrays
+	Hashes
+
+Symbols are special ruby data types which turns a given data into a symbol and symbols are maintained in a symbol table in ruby.
+
+symbol vs string 
+"If the content is important then use string"
+"If the identity is more important of object then use symbol"
+an object id of any object can be otained by 
+
+'object.object_id'
+
+To define a string and symbol
+	string="string goes here"
+	symbol=:symbol_goes_here
+
+Casting in Ruby
+	integer: object.to_i
+	float: object.to_f
+	string: object.to_s
+	symbol: object.to_sym
