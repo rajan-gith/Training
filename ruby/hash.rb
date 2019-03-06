@@ -27,4 +27,5 @@ p n2
 x=3
 p n2.key("three").equal?3
 
-
+n2.update(n2){|k,o_v,n_v| n_v="new three"}
+p n2
