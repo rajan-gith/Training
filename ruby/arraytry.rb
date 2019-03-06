@@ -60,4 +60,4 @@ str=''
 words.reverse_each{ |i| str+=i+" "}
 p str
 
-p b.map
+b.map {|i| p i**2 }
