@@ -26,3 +26,5 @@ Casting in Ruby
 	float: object.to_f
 	string: object.to_s
 	symbol: object.to_sym
+
+Capitalize is used for capitalizing first char of a string.
