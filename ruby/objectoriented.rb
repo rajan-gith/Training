@@ -1,9 +1,9 @@
 class Box
-	@@no_of_box=0
+	@@no_of_box = 0
 	def initialize(w,h)
-		@width,@height=w,h
-		@@no_of_box+=1
-		@area=w*h
+		@width,@height = w,h
+		@@no_of_box += 1
+		@area = w * h
 	end
 	def show_height
 		@height
