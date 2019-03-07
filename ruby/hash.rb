@@ -23,6 +23,7 @@ b.replace("jan"=>"january")
 p b
 n={1=>"one",2=>"two",3=>"three",4=>"four"}
 n2=n.select{|k,v| k>2 }
+
 p n2
 x=3
 p n2.key("three").equal?3
