@@ -23,3 +23,5 @@ p square.show_width.to_s + " is the widht of box, height is " + square.show_heig
 
 rectangle = Box.new(20,10)
 p rectangle.show_width.to_s + " is the widht of box, height is " + rectangle.show_height.to_s + " having area "+rectangle.area.to_s+" and box no. is "+rectangle.box_no.to_s
+
+p square.box_no.to_s, rectangle.box_no.to_s # the class variable remains same in between the instances of objects.
