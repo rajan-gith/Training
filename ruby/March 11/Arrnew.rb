@@ -28,3 +28,13 @@ p a.shuffle
 a.sort!
 
 p a
+
+# take(n) will take n elements from array 
+
+c = a.take(3)
+p c
+
+# take_while will have a condition with it also .
+p a
+c = a.take_while{ |i| i = 56 } # take while returns vlue prior to until block returns nil or false
+p c
