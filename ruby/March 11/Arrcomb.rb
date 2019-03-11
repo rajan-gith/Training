@@ -1,6 +1,13 @@
-a = [1,2,3]
+a = [1,2]
 
 # combination
-p a.combination(1).to_a
+p a.combination(2).to_a
+puts
 
-p a.combination(3).to_a
+#repeated combination
+
+p a.repeated_combination(4).to_a
+
+#repeated permutation
+puts
+p a.repeated_permutation(4).to_a
