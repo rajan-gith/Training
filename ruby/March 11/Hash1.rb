@@ -27,3 +27,6 @@ p  hash1.eql?(hash2)
 
 p  hash2.any? { |k,v| v == "value1"  }
 
+
+hash2.compare_by_identity
+p hash2.compare_by_identity?
