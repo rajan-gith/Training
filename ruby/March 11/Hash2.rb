@@ -29,4 +29,8 @@ p a.has_value?("Apple")
 
 p a.include?("a") 
 
-p a.key("Apple") # returns key for the value
+p a.key("Apple") # returns key for the value.
+
+p a.member?("a")
+
+	
