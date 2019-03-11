@@ -19,7 +19,7 @@ p b
 a.merge!(b)
 p a
 
-b.replace("jan"=>"january")
+b.replace("jan"=>"january") # replaces the whole hash
 p b
 n={1=>"one",2=>"two",3=>"three",4=>"four"}
 n2=n.select{|k,v| k>2 }
