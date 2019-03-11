@@ -24,6 +24,6 @@ puts
 # zip converts any args to array and merge elements to self.
 a = [ 4, 5, 6 ]
 b = [ 7, 8, 9 ]
-p [1, 2, 3].zip(a, b)  
+p [1, 2, 3].zip(a, b)   
 p [1, 2].zip(a, b)      
 p a.zip([1, 2], [8])    
