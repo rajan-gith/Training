@@ -1,4 +1,5 @@
 module M1
+	C=100
   def a1
 		puts "m1 module a1 method"
 	end
@@ -25,3 +26,4 @@ c::a1
 c.a2
 c.b1
 c.b2
+p M1::C
