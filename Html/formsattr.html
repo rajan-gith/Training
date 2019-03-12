@@ -6,9 +6,23 @@
 <body>
 
 	<form action="">
-  	First name:<br>
-  	<input type="text" name="firstname" value="John" disabled>
+  	User name:<br>
+  	<input type="text" name="username" value="John" disabled>
 	</form>
+  First name:<br>
+	<input type="text" name="firstname" maxlength="10">
+	<br>
+	Last name:<br>
+  <input type="text" name="lastname" value="Doe" >
 
+  
+	<h2>The autofocus Attribute</h2>
+	<p>The autofocus attribute specifies that the input field should automatically get focus when the page loads.</p>
+
+	<form action="/action_page.php">
+	  First name:<input type="text" name="fname" autofocus><br>
+	  Last name: <input type="text" name="lname"><br>
+	  <input type="submit">
+	</form>
 </body>
 </html>
