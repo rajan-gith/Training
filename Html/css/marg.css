@@ -1,26 +1,34 @@
 body{
 	background-color: red;
 	height: 100%;
+	margin:20px;
+	padding: 20px;
+	border: 2px solid black;
 }
 
 .first{
+	padding: 25px;
+	margin: 25px;
 	height: 100%;
 	background-color: blue;
 }
 
 p{
-	
+	margin: 10px;
 	background-color: green;
 }
 
 p.one{
+	padding: 10px;
 	background-color: orange;
 }
 
 p.two{
+	padding: 20px;
 	background-color: yellow;
 }
 
 p.three{
+	padding: 30px;
 	background-color: green;
 }
