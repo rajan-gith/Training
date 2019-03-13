@@ -6,4 +6,6 @@ document.getElementById("result").innerHTML+= (a)+" "+(b)
 var x = 5;
 var y = 2;
 var z = x - y;
+var m = x * y
 document.getElementById("demo2").innerHTML = z
+document.getElementById("multi").innerHTML = m
