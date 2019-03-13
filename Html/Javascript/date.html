@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+<P>Date(year,month,date,hrs,minutes,seconds,millisecond)</P>
+<p id="demo"></p>
+<p id="year"></p><span>year</span>
+<p id="month"></p><span>month</span>
+<p id="date"></p><span>Date</span>
+<p id="hours"></p><span>hours</span>
+<p id="minutes"></p><span>minutes</span>
+<p id="date"></p><span>Date</span>
+
+<script>
+var d = new Date(2018, 11, 24, 10, 33, 30, 10);
+document.getElementById("demo").innerHTML = d;
+document.getElementById("year").innerHTML = d.getFullYear();
+document.getElementById("month").innerHTML = d.getMonth();
+document.getElementById("date").innerHTML = d.getDate();
+document.getElementById("hours").innerHTML = d.getHours();
+document.getElementById("minutes").innerHTML = d.getMinutes();
+
+</script>
+
+
+</body>
+</html>
