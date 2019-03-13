@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers</title>
+</head>
+<body>
+
+	<p id="one">100</p>
+	<p id="two">200</p>
+	<p id="result"></p>
+	<button onclick="cal()">calculate</button>
+	<script type="text/javascript">
+		function cal(){	
+			a=document.getElementById('one').innerHTML;
+			b=document.getElementById('two').innerHTML;
+			a=parseInt(a)
+			b=parseInt(b)	
+			document.getElementById("result").innerHTML=a+b;
+		}	
+	</script>
+</body>
+</html>
