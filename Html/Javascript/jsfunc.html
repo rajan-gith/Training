@@ -11,7 +11,17 @@
 		function toCelsius(fahrenheit) {
 		  return (5/9) * (fahrenheit-32);
 		} 
+		function hello(name) {
+
+			document.getElementById("greet").innerHTML="welcome "+name;
+		}
 	</script>
+
+	<p id="name">John</p>
+	<p id="greet"></p>
+	<button onclick="hello(document.getElementById('name').innerHTML)">Greet button</button>
+
+
 
 </body>
 </html>
