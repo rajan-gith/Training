@@ -23,7 +23,10 @@ class Can
 end
 c = Can.new
 c::a1
+c::a2
+c::b2
 c.a2
 c.b1
 c.b2
 p M1::C
+
