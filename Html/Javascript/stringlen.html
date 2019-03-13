@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length</title>
+</head>
+<body>
+
+	<p id="text">This is a text in paragraph tag.</p>
+	<p id="len">len: </p>
+	<button onclick="calculate()">Click this button to know the length of string above.</button> 
+
+</body>
+	<script type="text/javascript">
+		function calculate() {
+			var len=document.getElementById('text').innerHTML.length;
+			document.getElementById("len").innerHTML="len: "+len;
+
+		}
+	</script>
+</html>
