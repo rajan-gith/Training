@@ -23,3 +23,7 @@ console.log(x) // after the five  other operators are considered as strings.
 
 var x = 2 + 3 + "5"; // before the string other operators were considerd as numeric and then after as string.
 console.log(x)
+
+var x = 10;
+x += 5;
+document.getElementById("demo").innerHTML = x;
