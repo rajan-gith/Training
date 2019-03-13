@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+	<script type="text/javascript">
+		var Car={
+			'name':"Volvo",
+			'model':500,
+			'weigth': "850kg" ,
+			'color' : "white" 
+		}
+		function see() {
+			document.getElementById("name").innerHTML=Car.name;
+			document.getElementById("model").innerHTML=Car.model;
+			document.getElementById('weigth').innerHTML=Car.weigth;
+			document.getElementById('color').innerHTML=Car.color;
+
+		}
+	</script>
+</head>
+<body>
+
+	<h2>Here we have an Javascript Object</h2>
+	<h4>and here are the values</h4>
+	<button onclick="see()">Click to see</button>
+	<p id="name"></p>
+	<p id="model"></p>
+	<p id="weigth"></p>
+	<p id="color"></p>
+
+</body>
+</html>
