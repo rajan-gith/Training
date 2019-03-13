@@ -16,3 +16,10 @@ console.log("John" + " " + "Doe") //string concatenation
 /* this 
 is 
 a multiline comment*/
+
+
+var x = "5" + 2 + 3;
+console.log(x) // after the five  other operators are considered as strings.
+
+var x = 2 + 3 + "5"; // before the string other operators were considerd as numeric and then after as string.
+console.log(x)
