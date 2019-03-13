@@ -8,13 +8,25 @@
 	<p id="text">This is a text in paragraph tag.</p>
 	<p id="len">len: </p>
 	<button onclick="calculate()">Click this button to know the length of string above.</button> 
-
+	<h4>To get an array of following</h4>
+	<p id="st">a,b,c,d,e,f,g,h,i</p>
+	<p id="arr">array is in console.</p>
+	<button onclick="toarr()">Click here.</button>
 </body>
 	<script type="text/javascript">
 		function calculate() {
 			var len=document.getElementById('text').innerHTML.length;
 			document.getElementById("len").innerHTML="len: "+len;
 
+
+		}
+		var x;
+		var v;
+		function toarr(argument) {
+			x = document.getElementById("st").innerHTML;
+			v = x.split(",")
+			console.log(v)
+			
 		}
 	</script>
 </html>
