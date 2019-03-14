@@ -1,5 +1,6 @@
 class StudentController < ApplicationController
   def index
+    render 'welcome/index'
   end
 
   def edit
