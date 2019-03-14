@@ -1,3 +1,22 @@
 1. gem install rails
 gems are the packages in ruby.
 rails version 5.2.2.1
+
+
+2. rails new project_name
+to create new project with named project_name.
+
+3. rails new project_name -d postgresql
+to create new project with postgresql database.
+
+4. rails s / rails server
+to start rails server on development machine
+
+5. change the database.yml file to connect with database
+eg  host:Hostname / localhost
+    port:5432 /port
+    username: postgres /user
+    password: ***** / user's password
+
+6. rake routes / rails routes
+to check if there are routes or not
