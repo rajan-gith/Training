@@ -4,6 +4,7 @@ class StudentController < ApplicationController
   end
 
   def edit
+    render 'student/index'
   end
 
   def new
