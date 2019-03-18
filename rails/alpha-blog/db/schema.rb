@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_103721) do
+ActiveRecord::Schema.define(version: 2019_03_18_105626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_103721) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_enrollments_on_game_id"
+    t.index ["user_id", "game_id"], name: "index_enrollments_on_user_id_and_game_id", unique: true
     t.index ["user_id"], name: "index_enrollments_on_user_id"
   end
 
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_103721) do
     t.bigint "user_id"
     t.bigint "event_id"
     t.index ["event_id"], name: "index_events_users_on_event_id"
+    t.index ["user_id", "event_id"], name: "index_events_users_on_user_id_and_event_id", unique: true
     t.index ["user_id"], name: "index_events_users_on_user_id"
   end
 
