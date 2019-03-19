@@ -108,3 +108,10 @@ unscope
     returns object with id in descending order.
   team = Team.all.order(id: :desc).unscope(:order)
     returns objects with ascending order.
+
+  team = Team.all.order(id: :desc).merge(Team.unscope(:order))
+
+only
+  team = Team.all.order(id: :desc).limit(6).only(:order)
+
+  only keeps the query to be applied only such as above will return from only order method and will ignore limit method.
