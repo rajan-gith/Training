@@ -85,3 +85,8 @@ distinct
 limt
   team = Team.all.limit(5)
   Team Load (37.6ms)  SELECT  "teams".* FROM "teams" LIMIT $1  [["LIMIT", 5]]
+
+
+  team = Team.all.limit(5).offset(3)
+  Team Load (0.8ms)  SELECT  "teams".* FROM "teams" LIMIT $1 OFFSET $2  [["LIMIT", 5], ["OFFSET", 3]]
+  
