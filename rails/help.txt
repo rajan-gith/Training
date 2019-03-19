@@ -81,3 +81,7 @@ select
 distinct
   user = User.select(:name).distinct
   User Load (0.9ms)  SELECT  DISTINCT "users"."name" FROM "users" LIMIT $1  [["LIMIT", 11]]
+
+limt
+  team = Team.all.limit(5)
+  Team Load (37.6ms)  SELECT  "teams".* FROM "teams" LIMIT $1  [["LIMIT", 5]]
