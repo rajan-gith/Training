@@ -142,3 +142,6 @@ find_or_create_by
 find_by_sql
   usr = User.find_by_sql("select * from users")
   User Load (1.0ms)  select * from users
+pluck
+  usr = User.pluck(:id)
+  (0.9ms)  SELECT "users"."id" FROM "users"
