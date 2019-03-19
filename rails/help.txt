@@ -77,4 +77,7 @@ select
   user = User.order(created_at: :desc, updated_at: :asc).select(:name)
   user = User.select(:name)
   User Load (0.7ms)  SELECT  "users"."name" FROM "users" LIMIT $1  [["LIMIT", 11]]
-  
+
+distinct
+  user = User.select(:name).distinct
+  User Load (0.9ms)  SELECT  DISTINCT "users"."name" FROM "users" LIMIT $1  [["LIMIT", 11]]
