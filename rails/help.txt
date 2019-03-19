@@ -93,3 +93,7 @@ limt
 group
   player = Player.select(:team_id).group(:team_id).count
   (1.4ms)  SELECT COUNT("players"."team_id") AS count_team_id, "players"."team_id" AS players_team_id FROM "players" GROUP BY "players"."team_id"
+
+Having
+  player = Player.select(:team_id).group(:team_id).having("count(team_id)>2")
+  Player Load (1.4ms)  SELECT  "players"."team_id" FROM "players" GROUP BY "players"."team_id" HAVING (count(team_id)>2) LIMIT $1  [["LIMIT", 11]]
