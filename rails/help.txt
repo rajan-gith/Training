@@ -123,3 +123,13 @@ reorder
 
 reverse_order
   Team.all.order(id: :desc).limit(6).only(:order).reverse_order
+
+
+include and joins
+
+  user = User.includes(:posts)
+  User Load (0.8ms)  SELECT  "users".* FROM "users" LIMIT $1  [["LIMIT", 11]]
+  Post Load (1.2ms)  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN ($1, $2, $3, $4)  [["user_id", 2], ["user_id", 3], ["user_id", 5], ["user_id", 6]]
+
+  user = Post.joins(:user)
+  Post Load (1.3ms)  SELECT  "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id" LIMIT $1  [["LIMIT", 11]]
