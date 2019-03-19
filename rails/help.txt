@@ -115,3 +115,11 @@ only
   team = Team.all.order(id: :desc).limit(6).only(:order)
 
   only keeps the query to be applied only such as above will return from only order method and will ignore limit method.
+
+
+reorder
+  team = Team.all.order(id: :desc).limit(6).only(:order).reorder(:id)
+  this will override default scope
+
+reverse_order
+  Team.all.order(id: :desc).limit(6).only(:order).reverse_order
