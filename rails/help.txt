@@ -89,4 +89,7 @@ limt
 
   team = Team.all.limit(5).offset(3)
   Team Load (0.8ms)  SELECT  "teams".* FROM "teams" LIMIT $1 OFFSET $2  [["LIMIT", 5], ["OFFSET", 3]]
-  
+
+group
+  player = Player.select(:team_id).group(:team_id).count
+  (1.4ms)  SELECT COUNT("players"."team_id") AS count_team_id, "players"."team_id" AS players_team_id FROM "players" GROUP BY "players"."team_id"
