@@ -145,3 +145,10 @@ find_by_sql
 pluck
   usr = User.pluck(:id)
   (0.9ms)  SELECT "users"."id" FROM "users"
+some common caluculations
+
+count: User.count(:id)
+average:User.average(:id)
+sum: User.sum(:id)
+maximum: User.maximum(:id)
+minimum:User.minimum(:id)
