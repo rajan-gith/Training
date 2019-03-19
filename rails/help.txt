@@ -66,3 +66,6 @@ or
 order
   user = User.order(:created_at)
   User Load (1.8ms)  SELECT  "users".* FROM "users" ORDER BY "users"."created_at" ASC LIMIT $1  [["LIMIT", 11]]
+
+  user = User.order(created_at: :desc)
+  User Load (1.0ms)  SELECT  "users".* FROM "users" ORDER BY "users"."created_at" DESC LIMIT $1  [["LIMIT", 11]]
