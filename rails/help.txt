@@ -133,3 +133,7 @@ include and joins
 
   user = Post.joins(:user)
   Post Load (1.3ms)  SELECT  "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id" LIMIT $1  [["LIMIT", 11]]
+
+find_or_create_by
+  usr = User.find_or_create_by(name: "John Doe")
+  User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2  [["name", "John Doe"], ["LIMIT", 1]]
