@@ -100,4 +100,11 @@ Having
 
   player = Player.select(:team_id).group(:team_id).having("count(team_id)<?",3)
   Player Load (1.5ms)  SELECT  "players"."team_id" FROM "players" GROUP BY "players"."team_id" HAVING (count(team_id)<3) LIMIT $1  [["LIMIT", 11]]
-  
+
+Overriding conditions
+
+unscope
+  team = Team.all.order(id: :desc).unscope(:order)
+    returns object with id in descending order.
+  team = Team.all.order(id: :desc).unscope(:order)
+    returns objects with ascending order.
