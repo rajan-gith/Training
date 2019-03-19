@@ -137,3 +137,8 @@ include and joins
 find_or_create_by
   usr = User.find_or_create_by(name: "John Doe")
   User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2  [["name", "John Doe"], ["LIMIT", 1]]
+
+
+find_by_sql
+  usr = User.find_by_sql("select * from users")
+  User Load (1.0ms)  select * from users
