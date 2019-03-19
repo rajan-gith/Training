@@ -38,3 +38,9 @@ last
   User Load (1.2ms)  SELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1  [["LIMIT", 3]]
   user = User.order(:name).last(3)
   User Load (1.0ms)  SELECT  "users".* FROM "users" ORDER BY "users"."name" DESC LIMIT $1  [["LIMIT", 3]]
+
+find_by
+  user = User.find_by name: "John Doe"
+  User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2  [["name", "John Doe"], ["LIMIT", 1]]
+
+  find_by! same as find_by but raises error if not found any.
