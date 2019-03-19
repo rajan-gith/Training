@@ -6,3 +6,21 @@ find
 
   user = User.find(2)
   User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+
+  user = User.find([2,5])
+  ** this will return error if record not found.
+  User Load (1.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)  [["id", 2], ["id", 5]]
+
+take
+  The take method retrieves a record without any implicit ordering.
+  client = Client.take :- (SELECT * FROM clients LIMIT 1)
+
+  user = User.take(3)
+  User Load (0.9ms)  SELECT  "users".* FROM "users" LIMIT $1  [["LIMIT", 3]]
+
+first
+  The first method finds the first record ordered by primary key (default). For example:
+  client = Client.first :- (SELECT * FROM clients ORDER BY clients.id ASC LIMIT 1)
+
+  user = User.first(4)
+  User Load (1.0ms)  SELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1  [["LIMIT", 4]]
