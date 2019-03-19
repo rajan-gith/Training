@@ -152,3 +152,20 @@ average:User.average(:id)
 sum: User.sum(:id)
 maximum: User.maximum(:id)
 minimum:User.minimum(:id)
+
+
+
+
+##############Validations###############
+
+
+usr = User.new
+
+usr.valid?
+usr.invalid?
+
+to checking validity
+
+usr.errors
+
+to check errors
