@@ -54,3 +54,7 @@ where
 
   user = User.where(id: [5,4,3,2,1])
   User Load (1.4ms)  SELECT  "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4, $5) LIMIT $6  [["id", 5], ["id", 4], ["id", 3], ["id", 2], ["id", 1], ["LIMIT", 11]]
+
+not
+  user = User.where.not(id: [5,4,3,2,1])
+  User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."id" NOT IN ($1, $2, $3, $4, $5) LIMIT $6  [["id", 5], ["id", 4], ["id", 3], ["id", 2], ["id", 1], ["LIMIT", 11]]
