@@ -44,3 +44,13 @@ find_by
   User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2  [["name", "John Doe"], ["LIMIT", 1]]
 
   find_by! same as find_by but raises error if not found any.
+
+where
+  user = User.where(id: 5)
+  User Load (1.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 5], ["LIMIT", 11]]
+
+  user = User.where(created_at: (Time.now.midnight - 1.day)..Time.now.midnight)
+  User Load (0.8ms)  SELECT  "users".* FROM "users" WHERE "users"."created_at" BETWEEN $1 AND $2 LIMIT $3  [["created_at", "2019-03-17 18:30:00"], ["created_at", "2019-03-18 18:30:00"], ["LIMIT", 11]]
+
+  user = User.where(id: [5,4,3,2,1])
+  User Load (1.4ms)  SELECT  "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4, $5) LIMIT $6  [["id", 5], ["id", 4], ["id", 3], ["id", 2], ["id", 1], ["LIMIT", 11]]
