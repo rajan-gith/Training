@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :comments, as: :commentable
 
   validates :name, :username, :email, presence:true
+  validates :name, format: { with: /[a-zA-z]+/, message: "name is not valid" }
 end
