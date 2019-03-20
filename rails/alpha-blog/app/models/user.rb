@@ -1,4 +1,13 @@
+class PersonValidator < ActiveModel::Validator
+  def validate(record)
+    if record.name == "Rock"
+      record.errors[:base] << "This person is wwe Champion"
+    end
+  end
+end
+
 class User < ApplicationRecord
+  validates_with PersonValidator
   has_many :posts
   has_one :address
   has_and_belongs_to_many :events
