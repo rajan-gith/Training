@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_one :purse
   has_one :payment_history, through: :purse
   has_many :comments, as: :commentable
-
   validates :name, :username, :email, presence:true
   validates :name, format: { with: /\A\[a-zA-Z]+\z/, message: "name is not valid." }
   validates :username, format: { with: /\A\w.+\z/, message: "Enter user name in form of 'user1234'."}
