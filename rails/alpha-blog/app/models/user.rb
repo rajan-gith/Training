@@ -12,4 +12,5 @@ class User < ApplicationRecord
   validates :username, format: { with: /\A\w.+\z/, message: "Enter user name in form of 'user1234'."}
   validates :email, format: { with: /\A[\w.+-]+@\w+\.\w+\z/, message: "Enter correct email format." }
   validates :gender, inclusion: { in: %w(male female other), message: "Not valid gender."}
+  validates :name, length: { minimum: 4, maximum:10}
 end
