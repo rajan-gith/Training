@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :comments, as: :commentable
 
   validates :name, :username, :email, presence:true
-  validates :name, format: { with: /\A\w.+\z/, message: "name is not valid." }
+  validates :name, format: { with: /\A\[a-zA-Z]+\z/, message: "name is not valid." }
   validates :username, format: { with: /\A\w.+\z/, message: "Enter user name in form of 'user1234'."}
   validates :email, format: { with: /\A[\w.+-]+@\w+\.\w+\z/, message: "Enter correct email format" }
 end
