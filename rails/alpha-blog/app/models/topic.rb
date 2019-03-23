@@ -7,7 +7,11 @@ class Topic < ApplicationRecord
       self.title = "assigned form callback"
     end
   end
-  before_create do
+  before_create do  # this before_create fires on create operation only
+    self.title = self.title.capitalize
+  end
+
+  before_save do # this before_save triggers on update and create both operations
     self.title = self.title.capitalize
   end
 
