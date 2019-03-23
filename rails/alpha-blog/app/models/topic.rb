@@ -24,5 +24,9 @@ class Topic < ApplicationRecord
 
   before_destroy do
     puts "you are destorying record"
-  end 
+  end
+
+  after_save do
+    puts "you have updated #{self.title} "
+  end
 end
