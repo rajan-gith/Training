@@ -14,6 +14,8 @@ class Topic < ApplicationRecord
   before_save do # this before_save triggers on update and create both operations
     self.title = self.title.capitalize
   end
-
+  after_initialize do
+    puts "successfully initialized"
+  end
 
 end
