@@ -7,4 +7,9 @@ class Topic < ApplicationRecord
       self.title = "assigned form callback"
     end
   end
+  before_create do
+    self.title = self.title.capitalize
+  end
+
+
 end
