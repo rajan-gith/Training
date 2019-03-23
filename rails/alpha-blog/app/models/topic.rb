@@ -18,4 +18,11 @@ class Topic < ApplicationRecord
     puts "successfully initialized"
   end
 
+  after_find do
+    puts "successfully found"
+  end
+
+  before_destroy do
+    puts "you are destorying record"
+  end 
 end
