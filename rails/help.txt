@@ -104,7 +104,7 @@ Having
 Overriding conditions
 
 unscope
-  team = Team.all.order(id: :desc).unscope(:order)
+  team = Team.all.order(id: :desc)
     returns object with id in descending order.
   team = Team.all.order(id: :desc).unscope(:order)
     returns objects with ascending order.
