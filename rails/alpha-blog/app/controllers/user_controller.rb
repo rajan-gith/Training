@@ -16,8 +16,11 @@ class UserController < ApplicationController
   def create
     # render plain: params[:user].inspect
     @user = User.new(user_params)
-    @user.save
-    render('create')
+    if @user.save
+      render('create')
+    else
+      render('new')
+    end
   end
 
   private
