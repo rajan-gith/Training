@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'user/:id', to: 'user#show', as: 'show_user'
   get 'user/delete/:id', to: 'user#delete', as: 'delete_user'
   post 'user/create/', to: 'user#create', as: 'create'
+  get 'user/edit/:id', to: 'user#edit', as: 'edit_user'
 
 end
