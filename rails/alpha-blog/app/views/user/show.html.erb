@@ -7,11 +7,11 @@
   <body>
     <h1>Welcome This is the page of Alpha-Blog</h1>
     <p>User here.</p>
-    <% for user in @user%>
-    <span>Name: </span> <%= user.name %> <br>
-    <span>Username: </span> <%= user.username %> <br>
-    <span>Email: </span> <%= user.email %> <br>
-     <% end %>
+
+    <span>Name: </span> <%= @user.name %> <br>
+    <span>Username: </span> <%= @user.username %> <br>
+    <span>Email: </span> <%= @user.email %> <br>
+    
     <%= link_to 'Back to list', user_path%>
 
   </body>
