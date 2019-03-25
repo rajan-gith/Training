@@ -3,7 +3,6 @@ class UserController < ApplicationController
     @users = User.all
   end
   def show
-    @user = User.where(id: params[:id])
+    @user = User.find(params[:id])
   end
-
 end
