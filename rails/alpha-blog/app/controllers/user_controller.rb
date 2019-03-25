@@ -5,4 +5,8 @@ class UserController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+  def delete
+    @user = User.find(params[:id])
+    @user.destroy
+  end
 end
