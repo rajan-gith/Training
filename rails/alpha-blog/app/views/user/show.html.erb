@@ -11,7 +11,7 @@
     <span>Name: </span> <%= @user.name %> <br>
     <span>Username: </span> <%= @user.username %> <br>
     <span>Email: </span> <%= @user.email %> <br>
-    <%= link_to 'Delete this user', "delete/#{@user.id}" %>
+    <%= link_to 'Delete this user', delete_user_path(:id => @user.id) %>
 
 
     <%= link_to 'Back to list', user_path%>

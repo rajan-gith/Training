@@ -8,14 +8,14 @@ end
 
 class User < ApplicationRecord
   validates_with PersonValidator
-  has_many :posts
-  has_one :address
+  has_many :posts, dependent: :nullify
+  has_one :address, dependent: :nullify
   has_and_belongs_to_many :events
-  has_many :enrollments
+  has_many :enrollments, dependent: :nullify
   has_many :games, through: :enrollments
-  has_one :purse
-  has_one :payment_history, through: :purse
-  has_many :comments, as: :commentable
+  has_one :purse, dependent: :nullify
+  has_one :payment_history,dependent: :nullify, through: :purse
+  has_many :comments, as: :commentable,dependent: :nullify
   validates :name, :username, :email, presence:true
   validates :name, format: { with: /\A[a-zA-Z]+\z/, message: "name is not valid." }
   validates :username, format: { with: /\A\w.+\z/, message: "Enter user name in form of 'user1234'."}

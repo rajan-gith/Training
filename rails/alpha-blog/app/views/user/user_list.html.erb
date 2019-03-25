@@ -9,7 +9,7 @@
     <p>All Users here.</p>
 
     <% for user in @users %>
-      <span>Name: </span><%= link_to user.name , "/user/#{user.id}" %>
+      <span>Name: </span><%= link_to user.name , show_user_path(:id => user.id)  %>
       <br>
       <br>
     <% end %>

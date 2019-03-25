@@ -9,4 +9,7 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
   end
+  def new
+    @user = User.new
+  end
 end
