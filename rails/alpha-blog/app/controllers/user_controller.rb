@@ -1,6 +1,7 @@
 class UserController < ApplicationController
   def user_list
-    @user = User.all
+    @users = User.all
   end
+  
 
 end
