@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'about', to: 'welcome#about'
   get 'user', to: 'user#user_list'
-  resource :user
+  get 'user/:id', to: 'user#show'
+  
 end

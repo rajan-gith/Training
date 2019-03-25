@@ -9,7 +9,7 @@
     <p>All Users here.</p>
 
     <% for user in @users %>
-      <span>Name:</span> <%= user.name %>
+      <span>Name: </span><%= link_to user.name , "/user/#{user.id}" %>
       <br>
       <br>
     <% end %>
