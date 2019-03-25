@@ -5,6 +5,21 @@
     <title></title>
   </head>
   <body>
+    <%= link_to 'Home', root_path%>
     <h1>Create a User</h1>
+    <%= form_for @user,url: {action: "create" }  do |f| %>
+      <p>Name:</p>
+      <%= f.text_field :name %>
+      <p>Username:</p>
+      <%= f.text_field :username %>
+      <p>Email:</p>
+      <%= f.text_field :email %>
+      <p>Gender</p>
+      <%= f.text_field :gender %>
+      <p>Phone number:</p>
+      <%= f.text_field :ph_no %>
+      <br>
+      <%= f.submit "Create" %>
+    <% end %>
   </body>
 </html>
