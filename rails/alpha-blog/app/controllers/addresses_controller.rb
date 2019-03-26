@@ -1,4 +1,9 @@
 class AddressesController < ApplicationController
+  def new
+    # debugger
+    @user = User.find(params[:id])
+    @address = Address.new
+  end
   def edit
     @user = User.find(params[:id])
     # debugger
@@ -17,9 +22,18 @@ class AddressesController < ApplicationController
   end
 
   def create
+    # debugger
+    @address = Address.new(address_params)
+    if @address.save
+      render('create')
+    else
+      render('new')
+    end
   end
 
   def delete
+    @address = Address.find(params[:id])
+    @address.destroy
   end
 
   private
