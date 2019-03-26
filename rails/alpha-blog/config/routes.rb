@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'addresses/edit'
+  get 'addresses/edit/:id', to: 'addresses#edit', as: 'edit_addresses'
   get 'addresses/create'
   get 'addresses/delete'
+  patch 'address/:id', to: 'addresses#update', as: 'update'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
   get 'about', to: 'welcome#about'
