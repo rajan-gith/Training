@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'posts/edit'
   post 'posts/create'
   get 'posts/delete'
+  patch 'post/update'
   #########################################################################
   get 'addresses/create'
   get 'addresses/delete'
