@@ -1,8 +1,11 @@
 <h1>Posts#index</h1>
-
+<%= link_to 'Create post', posts_new_path(:id => @user.id) %>
 <% if @posts.length > 0 %>
   <% @posts.each do |post| %>
-    <%= post.id %>
+    <br>
+
+    <%= link_to post.id ,  posts_show_path(:id => post.id) %>
+
   <% end %>
   <% else %>
     <p>There are no posts right now</p>
