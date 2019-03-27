@@ -16,7 +16,7 @@ class User < ApplicationRecord
   has_one :purse, dependent: :nullify
   has_one :payment_history,dependent: :nullify, through: :purse
   has_many :comments, as: :commentable,dependent: :nullify
-  validates :name, :username, :email, presence:true
+  validates :name, :username, :email, presence: { message: "can't be null"}
   validates :name, format: { with: /\A[a-zA-Z\s]+\z/, message: "name is not valid." }
   validates :username, format: { with: /\A\w.+\z/, message: "Enter user name in form of 'user1234'."}
   validates :email, format: { with: /\A[\w.+-]+@\w+\.\w+\z/, message: "Enter correct email format." }, uniqueness: { case_sensitive: false }
