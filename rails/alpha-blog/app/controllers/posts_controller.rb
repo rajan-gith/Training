@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:id])
     @post = @user.posts.new(post_params)
     if @post.save
-      render('create')
+      redirect_to posts_index_path(:id => @user.id)
     else
       render('new')
     end
@@ -41,8 +41,9 @@ class PostsController < ApplicationController
 
   def delete
     @post = Post.find(params[:id])
+    id = @post.user_id
     @post.destroy
-    redirect_to posts_index_path
+    redirect_to posts_index_path(:id => id)
   end
 
   private
