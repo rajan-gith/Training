@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <div class="header">
+
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "Users list", user_path  %>
+        </li>
+      </ul>
+
+    </div>
     <%= yield %>
   </body>
 </html>
