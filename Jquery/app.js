@@ -58,3 +58,14 @@ var test;
 test = $('.test')
 test.append(" <h1> appended </h1> ")
 test.prepend(" <h1> preappend </h1> ")
+
+
+// jQuery each method
+function counting() {
+  var text,number;
+  text = $(this).text();
+  number = text.length;
+  $(this).text(text+ " " +number);
+}
+
+$('p').each(counting);
