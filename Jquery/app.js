@@ -34,3 +34,12 @@ var articleItems;
 articleItems = $('.article-item')
 
 articleItems.css('font-size',20)
+
+// Changing elements val from jquery.
+
+$('#input').on('change', function() {
+    var val, h1;
+    val = $('#input').val();
+    h1 = $('.articles').children('h1');
+    h1.text(val);
+});
