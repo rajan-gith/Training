@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   patch 'event/update'
   get 'event/new'
   post 'event/create'
+  patch 'event/add', to: 'event#add_event_ids_to_user'
 
 
   get 'posts/index'

@@ -4,6 +4,20 @@
     <%= event.title %>
     <br>
   <% end %>
+  <%= form_for @user, url: event_add_path(:u_id => @user.id), method: :patch  do |f| %>
+    <%= f.collection_check_boxes :event_ids, Event.all, :id, :title do |e| %>
+      <%= e.check_box %>
+      <%= e.label %>
+    <% end %>
+    <%= f.submit "add" %>
+  <% end %>
   <% else %>
-    <p>There are no events</p>
+    <p>There are no events try to add.</p>
+  <%= form_for @user, url: event_add_path(:u_id => @user.id), method: :patch  do |f| %>
+    <%= f.collection_check_boxes :event_ids, Event.all, :id, :title do |e| %>
+      <%= e.check_box %>
+      <%= e.label %>
+    <% end %>
+    <%= f.submit "add" %>
+  <% end %>
 <% end %>
