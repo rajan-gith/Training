@@ -7,13 +7,22 @@ class EventController < ApplicationController
   end
 
   def delete
+    @event = Event.find(params[:e_id])
+    @event.destroy
+    redirect_to :action => "index"
   end
 
   def edit
-    
+    @event = Event.find(params[:e_id])
   end
 
   def update
+    @event = Event.find(params[:e_id])
+    if @event.update(event_params)
+      redirect_to event_index_path
+    else
+      render 'edit'
+    end
   end
 
   def new
@@ -25,7 +34,7 @@ class EventController < ApplicationController
     if @event.save()
       redirect_to event_index_path
     else
-      render new
+      render 'new'
     end
 
   end

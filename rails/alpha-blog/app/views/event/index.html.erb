@@ -1,9 +1,15 @@
 <h1>Event#index</h1>
-<% @events.each do |event| %>
-  <br>
-  <%= event.id %>
-  <%= event.title %>
-
+<% if @events.any? %>
+  <% @events.each do |event| %>
+    <br>
+    <%= event.id %>
+    <%= event.title %>
+    <%= link_to "Edit", event_edit_path(:e_id => event.id) %>
+    <%= link_to "Delete", event_delete_path(:e_id => event.id), method: :delete%>
+  <% end %>
+  <% else %>
+    <p>No events here</p>
 <% end %>
+
 <br>
 <%= link_to "Create new event", event_new_path %>

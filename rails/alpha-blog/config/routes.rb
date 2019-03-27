@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   get 'event/index'
   get 'event/show'
-  get 'event/delete'
+  delete 'event/delete'
   get 'event/edit'
-  get 'event/update'
+  patch 'event/update'
   get 'event/new'
   post 'event/create'
 
