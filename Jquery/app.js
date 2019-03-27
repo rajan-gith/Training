@@ -43,3 +43,12 @@ $('#input').on('change', function() {
     h1 = $('.articles').children('h1');
     h1.text(val);
 });
+
+
+// removing elements from html using jQuery
+
+var articleList;
+articleList = $('.article-list')
+
+ul = articleList.find('ul');
+ul.remove();
