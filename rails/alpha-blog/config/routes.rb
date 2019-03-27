@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'event/index'
-  get 'event/show'
+  get 'event/show', to: 'event#show_for_user'
   delete 'event/delete'
   get 'event/edit'
   patch 'event/update'

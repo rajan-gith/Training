@@ -3,7 +3,10 @@ class EventController < ApplicationController
     @events = Event.all
   end
 
-  def show
+  def show_for_user
+    @user = User.find(params[:u_id])
+    @events = @user.events
+    render('show')
   end
 
   def delete
