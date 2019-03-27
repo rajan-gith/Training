@@ -28,3 +28,9 @@ nav = navlist.children().first();
 link = nav.find('a')
 
 link.attr('href','#1')
+// adding an CSS attr value with jQuery
+var articleItems;
+
+articleItems = $('.article-item')
+
+articleItems.css('font-size',20)
