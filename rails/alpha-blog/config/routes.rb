@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'event/edit'
   get 'event/update'
   get 'event/new'
-  get 'event/create'
+  post 'event/create'
+
+
   get 'posts/index'
   get 'posts/show'
   get 'posts/new'
