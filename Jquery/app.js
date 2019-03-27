@@ -8,3 +8,13 @@ class_collection = $('.article-item')
 
 var nav
 nav = $('#nav')
+
+var articleList, h1, kids, parents;
+
+articleList = $('.article-list');
+
+h1 = articleList.siblings('h1');
+
+kids = articleList.find('*');
+
+parents = articleList.parents('div');
