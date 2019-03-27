@@ -52,3 +52,9 @@ articleList = $('.article-list')
 
 ul = articleList.find('ul');
 ul.remove();
+//  adding new elements with jQuery
+
+var test;
+test = $('.test')
+test.append(" <h1> appended </h1> ")
+test.prepend(" <h1> preappend </h1> ")
