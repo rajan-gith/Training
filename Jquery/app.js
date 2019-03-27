@@ -18,3 +18,13 @@ h1 = articleList.siblings('h1');
 kids = articleList.find('*');
 
 parents = articleList.parents('div');
+
+// adding an attr value with jQuery
+
+navlist = $('.nav-list');
+
+nav = navlist.children().first();
+
+link = nav.find('a')
+
+link.attr('href','#1')
