@@ -20,10 +20,10 @@ class PostsController < ApplicationController
   end
 
   def update
-    debugger
+    # debugger
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      render('update')
+      render('create')
     else
       render('edit')
     end
@@ -40,6 +40,9 @@ class PostsController < ApplicationController
   end
 
   def delete
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_index_path
   end
 
   private

@@ -3,4 +3,4 @@
 <%= @post.body %>
 <br>
 <%= link_to 'Edit this post',posts_edit_path(:id => @post.id)  %>
-<%= link_to 'Delete this post',posts_delete_path(:id => @post.id)  %>
+<%= link_to 'Delete this post',posts_delete_path(:id => @post.id), method: :delete  %>
