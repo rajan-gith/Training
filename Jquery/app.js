@@ -69,3 +69,17 @@ function counting() {
 }
 
 $('p').each(counting);
+
+// on passing a function in $() jQuery run that function after document.ready event
+
+function change_img() {
+
+articleitem = $(".article-item")
+
+image = articleitem.find('img')
+
+image.attr('src','http://lorempixel.com/350/150/animals/')
+	// body...
+}
+
+$(change_img)
