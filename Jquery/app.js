@@ -111,3 +111,8 @@ $('input').blur(function () {
   $(this).css("background-color", "#ccbbaa");
 
 })
+
+
+$("button").click(function(){
+  $("p").toggle();
+});
