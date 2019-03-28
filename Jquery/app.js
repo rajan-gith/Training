@@ -87,3 +87,7 @@ $(change_img)
 $('li').click(function(){ $(this).hide()})
 $('h2').dblclick(function(){ $(this).hide()})
 $('h1').click(function(){ $(this).hide()})
+
+$('#nav').mouseenter(function () {
+    alert("You pointed your mouse over the nav bar")
+})
