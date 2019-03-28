@@ -1,0 +1,6 @@
+<%# debugger %>
+<%= form_for @post, url: params[:action] == "new" ? posts_create_path(:id => @user.id) : posts_update_url(:id => @post.id) do |f|  %>
+  <%= f.text_field :body %>
+  <br>
+  <%= f.submit 'Create' %>
+<% end %>

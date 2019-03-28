@@ -1,7 +1,2 @@
 <h1>Posts#new</h1>
-<%= form_for @post, url: posts_create_path(:id => @user.id) do |f|  %>
-  <%= f.text_field :body %>
-  <br>
-
-  <%= f.submit 'Create' %>
-<% end %>
+<%= render 'form' %>
