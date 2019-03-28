@@ -114,5 +114,5 @@ $('input').blur(function () {
 
 
 $("button").click(function(){
-  $("p").toggle();
+  $("p").toggle(1000);
 });
