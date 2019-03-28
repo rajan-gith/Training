@@ -98,3 +98,16 @@ $('#nav').hover(function () {
   $(this).css('background','red');
 
 })
+
+$('input').focus(function () {
+
+  $(this).css("background-color", "#aabbcc");
+
+})
+
+
+$('input').blur(function () {
+
+  $(this).css("background-color", "#ccbbaa");
+
+})
