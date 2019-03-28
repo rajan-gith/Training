@@ -17,8 +17,9 @@ class UserController < ApplicationController
   end
 
   def create
+    debugger
+    
     @user = User.new(user_params)
-    # debugger
     if @user.save
       render('create')
     else

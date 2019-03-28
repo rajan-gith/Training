@@ -1,0 +1,18 @@
+<%= form_for @user,url: params[:action] == "new" ? create_user_path : update_user_path  do |f| %>
+  <p>Name:</p>
+  <%= f.text_field :name %>
+  <p>Username:</p>
+  <%= f.text_field :username %>
+  <p>Email:</p>
+  <%= f.text_field :email %>
+  <p>Gender</p>
+
+  <%= f.radio_button(:gender, "male") %>
+  <%= label_tag(:gender, "Male") %>
+  <%= f.radio_button(:gender, "female") %>
+  <%= label_tag(:gender, "Female") %>
+  <p>Phone number:</p>
+  <%= f.text_field :ph_no %>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>
