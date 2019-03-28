@@ -87,7 +87,14 @@ $(change_img)
 $('li').click(function(){ $(this).hide()})
 $('h2').dblclick(function(){ $(this).hide()})
 $('h1').click(function(){ $(this).hide()})
+$('#nav').css('background','blue')
+$('#nav').css('width','50%')
+// $('#nav').mouseenter(function () {
+//     $(this).css('background','green');
+//
+// })
 
-$('#nav').mouseenter(function () {
-    alert("You pointed your mouse over the nav bar")
+$('#nav').hover(function () {
+  $(this).css('background','red');
+
 })
