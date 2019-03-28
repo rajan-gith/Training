@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
+    # redirect_to posts_show_path
   end
 
   def new
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     # debugger
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      render('create')
+      redirect_to posts_show_path(:id =>@post.id)
     else
       render('edit')
     end
