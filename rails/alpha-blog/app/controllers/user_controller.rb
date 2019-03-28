@@ -17,11 +17,14 @@ class UserController < ApplicationController
   end
 
   def create
-    debugger
-    
+    # debugger
+
     @user = User.new(user_params)
     if @user.save
-      render('create')
+      respond_to do |format|
+        format.html { render 'create'}
+        format.js
+      end
     else
       render('new')
     end
