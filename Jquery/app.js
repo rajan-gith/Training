@@ -116,3 +116,7 @@ $('input').blur(function () {
 $("button").click(function(){
   $("p").toggle(1000);
 });
+
+$("#show").click(function(){
+  $("#panel").slideToggle();
+});
