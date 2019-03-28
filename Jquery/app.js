@@ -83,3 +83,5 @@ image.attr('src','http://lorempixel.com/350/150/animals/')
 }
 
 $(change_img)
+
+$('li').click(function(){ $(this).hide()})
