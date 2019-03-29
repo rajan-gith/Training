@@ -1,7 +1,7 @@
 <p>All Users here.</p>
 
 <% for user in @users %>
-  <span>Name: </span><%= link_to user.name , show_user_path(:id => user.id)  %>&nbsp&nbsp&nbsp<%= link_to 'Edit', edit_user_path(:id => user.id)  %>    &nbsp &nbsp
+  <span>Name: </span><%= link_to user.name , show_user_path(:id => user.id), remote: true  %>&nbsp&nbsp&nbsp<%= link_to 'Edit', edit_user_path(:id => user.id)  %>    &nbsp &nbsp
   <%= link_to 'Delete this user', delete_user_path(:id => user.id) %>
   <br>
   <br>

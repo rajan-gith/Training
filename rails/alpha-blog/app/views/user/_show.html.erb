@@ -17,7 +17,7 @@
     <%= link_to 'Delete this user', delete_user_path(:id => @user.id) %>
     &nbsp &nbsp
 
-    <%= link_to 'Back to list', user_path%>
+    <%= link_to 'Back to list', user_path, remote: true%>
     <br>
     <br>
     <%= link_to 'See all Posts of this User', posts_index_path(:id => @user.id)  %> &nbsp &nbsp
