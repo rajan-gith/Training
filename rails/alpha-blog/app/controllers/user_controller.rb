@@ -33,7 +33,7 @@ class UserController < ApplicationController
     # debugger
     @user = User.find(params[:id])
     if @user.update(user_params)
-      render('update')
+      render('show')
     else
       render('edit')
     end
