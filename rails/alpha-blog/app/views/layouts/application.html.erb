@@ -35,14 +35,19 @@
     <br>
     <%= yield %>
 
-    <div class="aj" style="background : #d9d9d9">
-      <div class="main">
+    <div class="aj" style="background : #d9d9d9; width: 100%; display: inline-flex">
+      <div class="main" style="  width: 60%; height:100%" >
 
-      </div>
-      <div class="attr">
-
+      </div><div class="attr" style="background : #bfbfbf;  width: 40%; height: auto;">
       </div>
     </div>
 
   </body>
+  <script type="text/javascript">
+
+  if ($('.attr').text().trim().length < 1){
+    $('.attr').hide();
+  }
+
+  </script>
 </html>
