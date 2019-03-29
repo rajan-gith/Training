@@ -23,16 +23,14 @@ class UserController < ApplicationController
 
     @user = User.new(user_params)
     if @user.save
-      respond_to do |format|
-        format.js
-      end
+      render 'show'
     else
       render('new')
     end
   end
 
   def update
-    debugger
+    # debugger
     @user = User.find(params[:id])
     if @user.update(user_params)
       render('update')
