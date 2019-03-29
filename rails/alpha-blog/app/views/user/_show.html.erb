@@ -13,7 +13,7 @@
     <%= link_to 'Create address', new_address_path(:id => @user.id) %>
     <% end %>
     <br>
-    <%= link_to 'Delete this user', delete_user_path(:id => @user.id) %>
+    <%= link_to 'Delete this user', delete_user_path(:id => @user.id), remote: true %>
     &nbsp &nbsp
 
     <%= link_to 'Back to list', user_path, remote: true%>
