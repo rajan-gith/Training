@@ -10,6 +10,8 @@ class UserController < ApplicationController
   def delete
     @user = User.find(params[:id])
     @user.destroy
+    redirect_to user_path()
+
   end
 
   def new
@@ -22,7 +24,6 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       respond_to do |format|
-        format.html { render 'create'}
         format.js
       end
     else
