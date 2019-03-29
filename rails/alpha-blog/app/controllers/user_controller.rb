@@ -5,13 +5,13 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
   end
 
   def delete
     @user = User.find(params[:id])
     @user.destroy
     redirect_to user_path()
-
   end
 
   def new
@@ -19,7 +19,7 @@ class UserController < ApplicationController
   end
 
   def create
-    # debugger
+    debugger
 
     @user = User.new(user_params)
     if @user.save

@@ -1,0 +1,12 @@
+<%= form_for @address,url: params[:action] == "new" ? addresses_create_path : update_address_path, remote: true  do |f| %>
+  <p>Street:</p>
+  <%= f.text_field :street %>
+  <p>City:</p>
+  <%= f.text_field :city %>
+  <p>Country:</p>
+  <%= f.text_field :country %>
+
+  <%= f.hidden_field :user_id ,value: @user.id %>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>

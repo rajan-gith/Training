@@ -15,7 +15,7 @@ class AddressesController < ApplicationController
     @address = Address.find_by_user_id(params[:id])
 
     if @address.update(address_params)
-      render('update')
+      redirect_to show_user_path(:id =>@address.user_id), format: 'js'
     else
       render('edit')
     end
@@ -25,7 +25,7 @@ class AddressesController < ApplicationController
     # debugger
     @address = Address.new(address_params)
     if @address.save
-      render('create')
+      redirect_to show_user_path(:id =>@address.user_id), format: 'js'
     else
       render('new')
     end
@@ -34,6 +34,7 @@ class AddressesController < ApplicationController
   def delete
     @address = Address.find(params[:id])
     @address.destroy
+    redirect_to show_user_path
   end
 
   private

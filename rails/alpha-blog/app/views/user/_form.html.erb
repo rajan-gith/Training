@@ -1,3 +1,4 @@
+<%# debugger %>
 <%= form_for @user,url: params[:action] == "new" ? create_user_path : update_user_path, remote: true  do |f| %>
   <p>Name:</p>
   <%= f.text_field :name %>

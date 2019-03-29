@@ -4,14 +4,18 @@
     <span>Username: </span> <%= @user.username %> <br>
     <span>Email: </span> <%= @user.email %> <br>
     <% if @user.address %>
-    <span>Address: </span> <%= "#{@user.address.street}, #{@user.address.city}, #{@user.address.country}" %> <br>
-
+    <br>
+     <b><span>Address: </span></b> <%= "#{@user.address.street}, #{@user.address.city}, #{@user.address.country}" %> <br>
+    <br>
     <%= link_to 'update address', edit_addresses_path(:id => @user.id), remote: true %>
     <br>
-    <%= link_to 'Delete address', delete_addresses_path(:id => @user.address.id) %>
+    <%= link_to 'Delete address', delete_addresses_path(:id => @user.address.id), remote: true %>
+
     <% else %>
-    <%= link_to 'Create address', new_address_path(:id => @user.id) %>
+    <br>
+    <%= link_to 'Create address', new_address_path(:id => @user.id), remote: true %>
     <% end %>
+    <br>
     <br>
     <%= link_to 'Delete this user', delete_user_path(:id => @user.id), remote: true %>
     &nbsp &nbsp
