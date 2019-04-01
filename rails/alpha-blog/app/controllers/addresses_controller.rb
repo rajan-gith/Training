@@ -13,9 +13,10 @@ class AddressesController < ApplicationController
   def update
     # debugger
     @address = Address.find_by_user_id(params[:id])
+    @user = User.find(params[:id])
 
     if @address.update(address_params)
-      redirect_to show_user_path(:id =>@address.user_id), format: 'js'
+      render 'update'
     else
       render('edit')
     end
@@ -24,17 +25,20 @@ class AddressesController < ApplicationController
   def create
     # debugger
     @address = Address.new(address_params)
+    @user = User.find(@address.user_id)
     if @address.save
-      redirect_to show_user_path(:id =>@address.user_id), format: 'js'
+      render 'create'
     else
       render('new')
     end
   end
 
   def delete
+    # debugger
     @address = Address.find(params[:id])
+    @user = User.find(@address.user_id)
     @address.destroy
-    redirect_to show_user_path
+
   end
 
   private

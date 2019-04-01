@@ -5,13 +5,16 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
+    respond_to do |format|
+      format.js
+      # format.html {render('show')}
+    end
   end
 
   def delete
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to user_path()
+    redirect_to user_path(), format: 'js'
   end
 
   def new
@@ -19,7 +22,7 @@ class UserController < ApplicationController
   end
 
   def create
-    debugger
+    # debugger
 
     @user = User.new(user_params)
     if @user.save
