@@ -34,12 +34,20 @@ class BookController < ApplicationController
   end
 
   def delete
-    @book.destroy
-    redirect_to root_path
+    if @book.user_id == current_user.id
+      @book.destroy
+      redirect_to root_path
+    else
+      render 'msg'
+    end
   end
 
   def edit
-
+    if @book.user_id == current_user.id
+      render 'edit'
+    else
+      render 'msg'
+    end
   end
 
   private
