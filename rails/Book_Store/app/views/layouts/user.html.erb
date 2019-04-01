@@ -5,13 +5,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application',  media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <p>application layout</p>
   <body>
+    <p>user layout</p>
     <%= link_to 'Home', root_path %> &nbsp &nbsp
     <% if user_signed_in? %>
       <%= link_to "#{current_user.email}", edit_user_registration_path %> <br>
