@@ -1,4 +1,5 @@
 class BookController < ApplicationController
+
   def index
     @books = Book.all
   end
@@ -31,6 +32,8 @@ class BookController < ApplicationController
   end
 
   def delete
+    @book = Book.find(params[:id])
+    @book.destroy
   end
 
   def edit

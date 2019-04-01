@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'book/new'
   post 'book/create'
   patch 'book/update'
-  get 'book/delete'
+  delete 'book/delete'
   get 'book/edit'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

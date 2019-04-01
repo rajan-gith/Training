@@ -6,4 +6,6 @@ author : <%= @book.user.email %> <br>
 
 <%= link_to 'Edit', book_edit_path(:id => @book.id)  %>
 <br>
+<%= link_to 'Delete', book_delete_path(:id => @book.id), method: :delete  %>
+<br>
 <%= link_to 'back to list', root_path %>
