@@ -1,12 +1,12 @@
 class BookController < ApplicationController
   before_action :authenticate_user!, except: [:index, :view]
-
+  before_action :set_book, only: [:view, :edit, :update, :delete]
   def index
     @books = Book.all
   end
 
   def view
-    @book = Book.find(params[:id])
+    
   end
 
   def new
@@ -24,7 +24,7 @@ class BookController < ApplicationController
   end
 
   def update
-    @book = Book.find(params[:id])
+
     if @book.update(book_params)
       render 'update'
     else
@@ -33,16 +33,20 @@ class BookController < ApplicationController
   end
 
   def delete
-    @book = Book.find(params[:id])
+
     @book.destroy
   end
 
   def edit
-    @book = Book.find(params[:id])
+
   end
 
   private
   def book_params
     params.require(:book).permit(:name, :price, :user_id)
+  end
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 end
