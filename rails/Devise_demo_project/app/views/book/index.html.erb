@@ -1,0 +1,8 @@
+<% if @books.any? %>
+  <%= @books.each do |book| %>
+  Book name: <%= book.name %>
+  Price: <%= book.price %>
+  <% end %>
+  <% else %>
+  No book here.
+<% end %>
