@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'book/index'
+  root 'book#index'
   get 'book/view'
   get 'book/new'
   get 'book/create'
