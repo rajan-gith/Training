@@ -1,12 +1,13 @@
 class BookController < ApplicationController
   before_action :authenticate_user!, except: [:index, :view]
   before_action :set_book, only: [:view, :edit, :update, :delete]
-  layout 'user'
+  layout 'user', only: [:index, :view]
   def index
     @books = Book.all
   end
 
   def view
+
 
   end
 
