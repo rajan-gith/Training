@@ -2,4 +2,8 @@
 
 Name : <%= @book.name %> <br>
 price : <%= @book.price %> <br>
-author : <%= @book.user.email %>
+author : <%= @book.user.email %> <br>
+
+<%= link_to 'Edit', book_edit_path(:id => @book.id)  %>
+<br>
+<%= link_to 'back to list', root_path %>

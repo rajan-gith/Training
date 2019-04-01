@@ -1,4 +1,6 @@
 <h1>Book#index</h1>
+<%= link_to 'Create Book', book_new_path() %>
+<br>
 <% if @books.any? %>
   <% @books.each do |book| %>
     Name: <%= book.name %> &nbsp &nbsp <%= link_to 'View', book_view_path(:id => book.id) %> <br>

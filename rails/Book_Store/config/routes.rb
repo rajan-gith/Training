@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root 'book#index'
   get 'book/view'
   get 'book/new'
-  get 'book/create'
-  get 'book/update'
+  post 'book/create'
+  patch 'book/update'
   get 'book/delete'
   get 'book/edit'
   devise_for :users
