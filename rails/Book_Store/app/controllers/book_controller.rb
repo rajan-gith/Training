@@ -6,7 +6,7 @@ class BookController < ApplicationController
   end
 
   def view
-    
+
   end
 
   def new
@@ -14,10 +14,10 @@ class BookController < ApplicationController
   end
 
   def create
-    debugger
+    # debugger
     @book = Book.new(book_params)
     if @book.save()
-      render 'create'
+      redirect_to book_view_path(:id => @book.id)
     else
       render 'new'
     end
@@ -26,15 +26,16 @@ class BookController < ApplicationController
   def update
 
     if @book.update(book_params)
-      render 'update'
+      redirect_to book_view_path(:id => @book.id)
     else
       render 'edit'
+
     end
   end
 
   def delete
-
     @book.destroy
+    redirect_to root_path
   end
 
   def edit
