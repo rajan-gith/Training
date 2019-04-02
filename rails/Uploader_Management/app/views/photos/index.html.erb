@@ -1,6 +1,6 @@
 <div class="page-header"><h1>Photos</h1></div>
 <% @photos.each do |photo| %>
-<div class="media">
+<div class="media" style="width:45%; display: inline-block; margin-left: 10px;">
   <div class="media-body">
     <h2 class="media-heading"><%= photo.title %></h2>
   </div>
@@ -17,3 +17,6 @@
 
 </div>
 <% end %>
+<br>
+<br>
+<%= will_paginate @posts %>
