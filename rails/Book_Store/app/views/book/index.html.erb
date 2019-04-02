@@ -2,6 +2,7 @@
 <%= link_to 'Create Book', book_new_path() %>
 <%= link_to 'See your own records', book_current_path %>
 <br>
+<%= will_paginate @books %>
 <% if @books.any? %>
   <% @books.each do |book| %>
     Name: <%= book.name %> &nbsp &nbsp <%= link_to 'View', book_view_path(:id => book.id) %> <br>

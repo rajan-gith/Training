@@ -1,5 +1,6 @@
 <h1>Book#view</h1>
-
+<%= link_to 'Create new Book', book_new_path() %>
+<br>
 Name : <%= @book.name %> <br>
 price : <%= @book.price %> <br>
 author : <%= @book.user.email %> <br>

@@ -3,7 +3,8 @@ class BookController < ApplicationController
   before_action :set_book, only: [:view, :edit, :update, :delete]
   # layout 'user', only: [:index, :view]
   def index
-    @books = Book.all
+    @books = Book.all.paginate(page: params[:page], per_page: 1)
+
     render layout: "user"
   end
 
@@ -13,7 +14,7 @@ class BookController < ApplicationController
   end
 
   def current
-    @books = Book.where(user_id:current_user.id)
+    @books = Book.where(user_id:current_user.id).paginate(page: params[:page], per_page: 3)
   end
 
   def new
