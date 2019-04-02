@@ -3,7 +3,7 @@ class BookController < ApplicationController
   before_action :set_book, only: [:view, :edit, :update, :delete]
   # layout 'user', only: [:index, :view]
   def index
-    @books = Book.all.paginate(page: params[:page], per_page: 1)
+    @books = Book.all.paginate(page: params[:page], per_page: 3)
 
     render layout: "user"
   end
