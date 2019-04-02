@@ -1,3 +1,14 @@
 <div class="page-header"><h1>Photos</h1></div>
-
-<%= render @photos %>
+<% @photos.each do |photo| %>
+<div class="media">
+  <div class="media-left">
+    <%= link_to image_tag(photo.image.url(:thumb), class: 'media-object'), photo.image.url, target: '_blank' %>
+    <%= link_to image_tag(photo.image.url(:cropped), class: 'media-object'), photo.image.url, target: '_blank' %>
+    <%= photo.image.url(:cropped) %>
+    <%= link_to "Delete", photo, method: :delete %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= photo.title %></h4>
+  </div>
+</div>
+<% end %>

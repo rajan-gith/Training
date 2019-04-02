@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  
+
   def index
     @photos = Photo.order('created_at')
   end
@@ -17,6 +17,13 @@ class PhotosController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    # debugger
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to photos_path
   end
 
   private
