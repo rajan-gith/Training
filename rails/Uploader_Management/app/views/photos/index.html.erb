@@ -1,14 +1,19 @@
 <div class="page-header"><h1>Photos</h1></div>
 <% @photos.each do |photo| %>
 <div class="media">
+  <div class="media-body">
+    <h2 class="media-heading"><%= photo.title %></h2>
+  </div>
   <div class="media-left">
+    <p>this below link is assigned to image's thumbs</p>
     <%= link_to image_tag(photo.image.url(:thumb), class: 'media-object'), photo.image.url, target: '_blank' %>
+    <br>
+    <br>
+    <p>this below link is assigned to image's cropped</p>
     <%= link_to image_tag(photo.image.url(:cropped), class: 'media-object'), photo.image.url, target: '_blank' %>
-    <%= photo.image.url(:cropped) %>
+
     <%= link_to "Delete", photo, method: :delete %>
   </div>
-  <div class="media-body">
-    <h4 class="media-heading"><%= photo.title %></h4>
-  </div>
+
 </div>
 <% end %>
