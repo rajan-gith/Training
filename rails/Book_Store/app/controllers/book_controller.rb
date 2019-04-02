@@ -5,11 +5,10 @@ class BookController < ApplicationController
   def index
     @books = Book.all.paginate(page: params[:page], per_page: 3)
 
-    render layout: "user"
+    # render layout: "user"
   end
 
   def view
-
 
   end
 

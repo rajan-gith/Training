@@ -12,18 +12,31 @@
 
   <p>application layout</p>
   <body>
-    <%= link_to 'Home', root_path %> &nbsp &nbsp
-    <% if user_signed_in? %>
-      <%= link_to "#{current_user.email}", edit_user_registration_path %> <br>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> <br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <%= link_to 'Book Store', root_path, class: "navbar-brand" %>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <%= link_to 'Add new Book', book_new_path(), class: "nav-link" %>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <% if user_signed_in? %>
+            <%= link_to "#{current_user.email}", edit_user_registration_path, class: "btn btn-outline-success my-2 my-sm-0" %> <br>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %> <br>
+          <% else %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+            <%= link_to 'Sign In' , new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %> <br>
+          <% end %>
+        </form>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-    <% else %>
-      <%= link_to 'Sign Up', new_user_registration_path %> <br>
-      <%= link_to 'Sign In' , new_user_session_path %> <br>
-    <% end %>
-
-
-
-    <%= yield %>
   </body>
 </html>
