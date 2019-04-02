@@ -2,7 +2,7 @@
 <%= link_to 'Create Book', book_new_path() %>
 <br>
 <%= link_to 'View all books', root_path %>
-<%= will_paginate @books %>
+
 <% if @books.any? %>
   <% @books.each do |book| %>
     Name: <%= book.name %> &nbsp &nbsp <%= link_to 'View', book_view_path(:id => book.id) %> <br>
@@ -10,3 +10,4 @@
   <% else %>
   Nothing here now.
 <% end %>
+<%= will_paginate @books %>
