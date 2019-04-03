@@ -1,6 +1,6 @@
 class BookCopy < ApplicationRecord
   belongs_to :book
-  belongs_to :user
+  belongs_to :user, optional: true
   validates :isbn, :published, :format, :book, presence: true
 
   HARDBACK = 1
