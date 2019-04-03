@@ -21,7 +21,7 @@ module Api
       def destroy
         @article = Article.find(params[:id])
         @article.destroy
-        render json:{status: 'SUCCESS', message: 'Deleted article', data: @article}, status: 204
+        render json:{status: 'SUCCESS', message: 'Deleted article'}, status: 204
 
       end
       def create
