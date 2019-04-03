@@ -2,6 +2,7 @@ class ApplicationController < ActionController::API
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+  before_action :authenticate_admin
 
   protected
 
