@@ -15,7 +15,7 @@ module Api
         if @article.update(article_params)
           render json:{status: 'SUCCESS', message: 'Loaded article', data: @article}, status: 201
         else
-          render json:{status: 'SUCCESS', message: 'Could not be saved', data: @article.errors}, status: 422
+          render json:{status: 'UNSUCCESS', message: 'Could not be saved', data: @article.errors}, status: 422
         end
       end
       def destroy
@@ -26,7 +26,7 @@ module Api
         if @article.save
             render json:{status: 'SUCCESS', message: 'Loaded article', data: @article}, status: 201
         else
-          render json:{status: 'SUCCESS', message: 'Could not be saved', data: @article.errors}, status: 422
+          render json:{status: 'UNSUCCESSFUL', message: 'Could not be saved', data: @article.errors}, status: 422
         end
       end
       private
