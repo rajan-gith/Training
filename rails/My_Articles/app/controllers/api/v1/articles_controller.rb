@@ -3,12 +3,13 @@ module Api
     class ArticlesController < ApplicationController
       def index
         @articles = Article.order('created_at DESC')
-        render json:{status: 'SUCCESS', message: 'Loaded articles', data: @articles}, status: 200
+        render json: @articles
       end
 
       def show
+        # debugger
         @article = Article.find(params[:id])
-        render json:{status: 'SUCCESS', message: 'Loaded article', data: @article}, status: 200
+        render json: @article
       end
       def update
         @article = Article.find(params[:id])
@@ -28,10 +29,10 @@ module Api
         end
       end
       def create
-        debugger
+        # debugger
         @article = Article.new(article_params)
         if @article.save
-            render json:{status: 'SUCCESS', message: 'Loaded article', data: @article}, status: 201
+            render json: @article
         else
           render json:{status: 'UNSUCCESSFUL', message: 'Could not be saved', data: @article.errors}, status: 422
         end
