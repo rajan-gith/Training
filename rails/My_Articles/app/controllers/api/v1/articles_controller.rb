@@ -19,10 +19,13 @@ module Api
         end
       end
       def destroy
-        @article = Article.find(params[:id])
-        @article.destroy
-        render json:{status: 'SUCCESS', message: 'Deleted article'}, status: 204
-
+        begin
+          @article = Article.find(params[:id])
+          @article.destroy
+          render json:{status: 'SUCCESS', message: 'Deleted article'}, status: 204
+        rescue Exception => e
+          render json:{status: 'UNSUCCESS', message: 'Could not be deleted', data: e}, status: 422
+        end
       end
       def create
         debugger
