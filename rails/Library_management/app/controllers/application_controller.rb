@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   rescue_from Pundit::NotAuthorizedError, with: :not_authorized
-  before_action :authenticate_admin
+  # before_action :authenticate_admin
 
   protected
 
