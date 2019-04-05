@@ -4,11 +4,38 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # debugger
+    params[:page] ||=1
     @products = Product.paginate(page: params[:page], per_page: 2)
+    # debugger
   end
   def search
-    @products = Product.where("name like ? ","%#{params[:search_str]}%").paginate(page: params[:page], per_page: 2)
+    # debugger
+    params[:page] ||=1
+    p params[:search_str].class
+    unless params[:search_str].blank?
+      p "worked"
+      p 1
+      p params[:search_str]
+      @products = Product.where("name like ? ","%#{params[:search_str]}%").paginate(page: params[:page], per_page: 2)
+    else
+      p 2
+      @products = Product.paginate(page: params[:page], per_page: 2)
+    end
+    unless params[:sort_cat].blank?
+      p 3
+      unless params[:search_str].blank?
+        p 4
+        @products = Product.where("name like ? ","%#{params[:search_str]}%").order("#{params[:sort_cat]} #{params[:sort_type]}").paginate(page: params[:page], per_page: 2)
+      else
+        p 5
+        @products = Product.order("#{params[:sort_cat]} #{params[:sort_type]}").paginate(page: params[:page], per_page: 2)
+      end
+    else
+
+    end
+
+
+    # @products = Product.where("name like ? ","%#{params[:search_str]}%").paginate(page: params[:page], per_page: 2)
   end
   # GET /products/1
   # GET /products/1.json
