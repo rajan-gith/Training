@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
         p 5
         @products = Product.order("#{params[:sort_cat]} #{params[:sort_type]}").paginate(page: params[:page], per_page: 2)
       end
-    else
+    
 
     end
 
