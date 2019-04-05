@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
-<%= form_tag url: search_path, remote: true do %>
+<%= form_tag url: search_path ,method: :get, remote: true do %>
   <%= text_field_tag :search_str %>
   <%# submit_tag 'Send' %>
 <% end %>
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Price</th>
+        <th>Name <%= link_to ' asc ', search_path(sort_cat: 'name', sort_type: 'asc'), remote: true %>|<%= link_to ' desc ', search_path(sort_cat: 'name', sort_type: 'desc'), remote: true %> </th>
+        <th>Price<%= link_to ' asc ',search_path(sort_cat: 'price', sort_type: 'asc'), remote: true %>|<%= link_to ' desc ', search_path(sort_cat: 'Price', sort_type: 'desc'), remote: true %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -21,7 +21,9 @@
 
 
 <br>
-
+<div id="pagination-links">
+		<%= render partial: 'pagination' %>
+</div>
 <br>
 
 <%= link_to 'New Product', new_product_path %>
