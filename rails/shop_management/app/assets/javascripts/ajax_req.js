@@ -4,9 +4,6 @@ function ajax_calls() {
                                          method: 'get',
                                          url: "products/search?search_str="+val,
                                          cache: false,
-                                         success: function(html){
-                                           //$("#results").append(html);
-                                         }
                                        });
                                      }
                            )
@@ -15,9 +12,6 @@ function ajax_calls() {
                                          method: 'get',
                                          url: "products/search?search_str="+val+"&sort_cat=name&sort_type=asc",
                                          cache: false,
-                                         success: function(html){
-                                           //$("#results").append(html);
-                                         }
                                        });
                                      }
                            )
@@ -26,9 +20,6 @@ function ajax_calls() {
                                        method: 'get',
                                        url: "products/search?search_str="+val+"&sort_cat=name&sort_type=desc",
                                        cache: false,
-                                       success: function(html){
-                                         //$("#results").append(html);
-                                       }
                                      });
                                    }
                          )
@@ -37,9 +28,6 @@ function ajax_calls() {
                                      method: 'get',
                                      url: "products/search?search_str="+val+"&sort_cat=price&sort_type=asc",
                                      cache: false,
-                                     success: function(html){
-                                         //$("#results").append(html);
-                                       }
                                      });
                                    }
                            )
@@ -48,9 +36,6 @@ function ajax_calls() {
                                      method: 'get',
                                      url: "products/search?search_str="+val+"&sort_cat=price&sort_type=desc",
                                      cache: false,
-                                     success: function(html){
-                                       //$("#results").append(html);
-                                       }
                                      });
                                    }
                            )
