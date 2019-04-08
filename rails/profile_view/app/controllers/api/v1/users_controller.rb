@@ -1,5 +1,5 @@
 module Api
-  module V1s
+  module V1
     class UsersController < ApplicationController
       def index
         @users = User.all
