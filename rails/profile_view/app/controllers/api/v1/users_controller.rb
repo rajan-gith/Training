@@ -3,19 +3,19 @@ module Api
     class UsersController < ApplicationController
       def index
         @users = User.all
-        render json:{status: 'SUCCESS', message: 'Loaded users', data: @users}, status: 201
+        render json: @users
       end
 
       def show
         @user = User.find(params[:id])
-        render json:{status: 'SUCCESS', message: 'Loaded user', data: @user}, status: 201
+        render json: @user
       end
 
       def create
         debugger
         @user = User.new(user_params)
         if @user.save
-          render json:{status: 'SUCCESS', message: 'saved user', data: @user}, status: 201
+          render json: @user
         else
           render json:{status: 'UNSUCCESS', message: 'user not saved'}, status: 201
         end
@@ -24,7 +24,7 @@ module Api
       def update
         @user = User.find(params[:id])
         if @user.update(user_params)
-          render json:{status: 'SUCCESS', message: 'saved user', data: @user}, status: 201
+          render json: @user
         else
           render json:{status: 'UNSUCCESS', message: 'user not saved'}, status: 201
         end
