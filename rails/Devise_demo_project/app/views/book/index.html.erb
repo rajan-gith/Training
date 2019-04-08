@@ -1,3 +1,17 @@
+
+<% if user_signed_in? %>
+<%= link_to "log out", destroy_user_session_path, method: :delete %>
+<%= current_user.email %>
+<% else %>
+&nbsp &nbsp &nbsp &nbsp
+<%= link_to "sign in", new_user_session_path %>&nbsp &nbsp &nbsp &nbsp
+<%= link_to "sign up", new_user_registration_path %>
+<% end %>
+
+<br>
+
+
+<br>
 <% if @books.any? %>
   <%= @books.each do |book| %>
   Book name: <%= book.name %>
