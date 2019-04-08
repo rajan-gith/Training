@@ -1,43 +1,23 @@
 function ajax_calls() {
+  $(".sort").click(function () {
+    console.log($(this).attr("id"))
+    sort_str = $(this).attr("id")
+    sort = sort_str.split("_")
+    val = $(search_str).val();
+    console.log(val)
+    $.ajax({
+    method: 'get',
+    url: "products/search?search_str="+val+"&sort_cat="+sort[0]+"&sort_type="+sort[1],
+    cache: false,
+    });
+  })
   $("#search_str").change(function() {val = $(this).val();
-                                       $.ajax({
-                                         method: 'get',
-                                         url: "products/search?search_str="+val,
-                                         cache: false,
-                                       });
-                                     }
-                           )
-  $("#name_asc").click(function() {val = $(search_str).val();
-                                       $.ajax({
-                                         method: 'get',
-                                         url: "products/search?search_str="+val+"&sort_cat=name&sort_type=asc",
-                                         cache: false,
-                                       });
-                                     }
-                           )
-  $("#name_desc").click(function() {val = $(search_str).val();
-                                     $.ajax({
-                                       method: 'get',
-                                       url: "products/search?search_str="+val+"&sort_cat=name&sort_type=desc",
-                                       cache: false,
-                                     });
-                                   }
-                         )
-  $("#price_asc").click(function() {val = $(search_str).val();
-                                     $.ajax({
-                                     method: 'get',
-                                     url: "products/search?search_str="+val+"&sort_cat=price&sort_type=asc",
-                                     cache: false,
-                                     });
-                                   }
-                           )
-  $("#price_desc").click(function() {val = $(search_str).val();
-                                     $.ajax({
-                                     method: 'get',
-                                     url: "products/search?search_str="+val+"&sort_cat=price&sort_type=desc",
-                                     cache: false,
-                                     });
-                                   }
-                           )
+    $.ajax({
+     method: 'get',
+     url: "products/search?search_str="+val,
+     cache: false,
+    });
+    }
+    )
 }
 $(ajax_calls);
