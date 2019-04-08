@@ -8,7 +8,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-
+  # def new
+    # build_resource({})
+    # self.resource.company = Company.new
+    # respond_with self.resource
+  # end
   # POST /resource
   # def create
   #   super
