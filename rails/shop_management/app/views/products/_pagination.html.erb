@@ -1,5 +1,10 @@
 
-<%= link_to 'previous', search_path(search_str: params[:search_str],page: @products.current_page.to_i==1 ? 1 : params[:page].to_i-1, total_pages: @products.total_pages,sort_cat: params[:sort_cat],sort_type: params[:sort_type]), remote: true %>|<%= @products.current_page %>|
+<%= link_to 'previous', search_path(search_str: params[:search_str],page: @products.current_page.to_i==1 ? 1 : params[:page].to_i-1, total_pages: @products.total_pages,sort_cat: params[:sort_cat],sort_type: params[:sort_type]), remote: true %>
+
+<% (1..@products.total_pages).each do |p| %>
+  <%= link_to p, search_path(search_str: params[:search_str],page: p, total_pages: @products.total_pages,sort_cat: params[:sort_cat],sort_type: params[:sort_type]), remote: true %>
+<% end %>
+
 <%= link_to 'next', search_path(search_str: params[:search_str],page: @products.current_page.to_i==@products.total_pages ? @products.total_pages : params[:page].to_i+1, total_pages: @products.total_pages,sort_cat: params[:sort_cat],sort_type: params[:sort_type]), remote: true %>
 <br>
 total pages:
