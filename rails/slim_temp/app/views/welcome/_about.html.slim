@@ -1,2 +1,9 @@
 h1 About Page
 p this is a partial page(_about)
+
+- if @articles.empty?
+    | No inventory
+- else
+  ol
+    - @articles.each do |article|
+      li #{article}
