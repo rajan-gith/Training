@@ -15,7 +15,11 @@ class PostsController < ApplicationController
     @post.save
     redirect_to root_path
   end
-  
+  def delete
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path
+  end
   private
   def post_param
     params.require(:post).permit(:title,:body)
