@@ -4,6 +4,13 @@ p this is a partial page(_about)
 - if @articles.empty?
     | No inventory
 - else
-  ol
-    - @articles.each do |article|
-      li #{article}
+    ol
+      - @articles.each do |article|
+        li #{article}
+h4 below are the posts
+- if @posts.empty?
+    | No posts
+- else
+    ol
+      - @posts.each do |post|
+        li #{post.title} #{post.body}
