@@ -1,8 +1,18 @@
 h1 Home Partial
-body
   / p
     |
       This is a test of the text block.
 
-  p menu 1 contains data
-  p you can add data from menu 2
+p menu 1 contains data
+p you can add data from menu 2
+ul
+  li.first: a href="#" A link
+  li: a href="#" B link
+h5 id="headline" Welcome to my site.
+
+- page_headline = "headline2"
+
+h5 id="headline"
+  | Welcome to my site.
+h1 id="headline"
+    = page_headline
