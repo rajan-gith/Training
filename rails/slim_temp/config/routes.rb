@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'posts/edit'
+  get 'posts/new'
+  get 'posts/update'
+  get 'posts/create'
   get 'welcome/index'
   # get 'welcome/about'
   # get 'welcome/contact_us'
