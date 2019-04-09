@@ -1,4 +1,4 @@
-h1 About Page
+h1 show page
 p this is a partial page(_about)
 
 - if @articles.empty?
@@ -15,5 +15,4 @@ h4 below are the posts
       - @posts.each do |post|
         li
           | <b>#{post.title}</b>: #{post.body}
-        = link_to posts_delete_path(:id => post.id ), method: :delete do
-          = 'delete'
+        = link_to 'Delete', posts_delete_path(:id => post.id ), method: :delete
