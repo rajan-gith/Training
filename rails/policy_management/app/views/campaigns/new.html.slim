@@ -1,2 +1,19 @@
-h1 Campaigns#new
-p Find me in app/views/campaigns/new.html.slim
+div class="container-fluid "
+  form
+  div class="row min-vh-100 position-relative"
+    aside class="col-6 col-md-2 p-0 left_nav position-relative"
+      div class="logo px-4 pt-4 pb-0 close_div"
+        a class="side_close"X
+        = image_tag "logo.svg", class: "mw-100"
+      nav class="navbar py-2 px-0"
+        ul class="link_group py-2 px-0 m-0"
+          li class="nav-item px-3 my-3"
+            = link_to "Home", '#', class: "nav-link px-0"
+
+
+          li class="nav-item px-3 my-3 active"
+            a class="nav-link px-0" href="#" Campaigns
+
+          li class="nav-item px-3 my-3"
+            a class="nav-link px-0" href="#" Organisations
+      
