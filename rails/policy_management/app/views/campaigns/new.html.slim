@@ -9,11 +9,13 @@ div class="container-fluid "
         ul class="link_group py-2 px-0 m-0"
           li class="nav-item px-3 my-3"
             = link_to "Home", '#', class: "nav-link px-0"
-
-
           li class="nav-item px-3 my-3 active"
-            a class="nav-link px-0" href="#" Campaigns
-
+            = link_to "Campaigns", "#", class: "nav-link px-0"
           li class="nav-item px-3 my-3"
-            a class="nav-link px-0" href="#" Organisations
-      
+            = link_to "Organisations", "#", class: "nav-link px-0"
+      div class="position-absolute px-3 terms_column w-100 pb-3"
+        div class="py-3 mb-3"
+          = link_to 'Terms & conditions', '#'
+          = link_to 'Business terms & conditions', '#'
+          = link_to 'Privacy Policy', '#'
+        p class="text-center mb-0" © PolicyMogul 2019
