@@ -1,6 +1,7 @@
 function behave() {
   console.log("loaded")
   $('.btnNext').click(function() {
+    console.log("printed")
     $('.nav-pills > .nav-item > .active').parent().next('li').find('a').trigger('click');
     $('.nav-pills > .nav-item > .active').parent().prev('li').find('a').addClass('completed');
     $('.nav-pills > .nav-item > .active').parent().prev('li').find('.wizard_line').addClass('completed');
