@@ -1,4 +1,5 @@
-function next_click_behave() {
+function behave() {
+  console.log("loaded")
   $('.btnNext').click(function() {
     $('.nav-pills > .nav-item > .active').parent().next('li').find('a').trigger('click');
     $('.nav-pills > .nav-item > .active').parent().prev('li').find('a').addClass('completed');
@@ -17,4 +18,5 @@ function next_click_behave() {
   });
 }
 
-$(next_click_behave);
+$(behave);
+console.log("loaded")
