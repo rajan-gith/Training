@@ -19,3 +19,186 @@ div class="container-fluid "
           = link_to 'Business terms & conditions', '#'
           = link_to 'Privacy Policy', '#'
         p class="text-center mb-0" © PolicyMogul 2019
+
+    main class="col p-0"
+      div class="px-md-3 px-3 top_column"
+        div class="row"
+          div class="d-sm-block d-md-none back_bl col-6 px-0 px-xs-3 py-2"
+            button class="d-inline-block btn" type="button" id="side_display"
+              i class="fa fa-bars"
+            = image_tag "logo.svg", class: "d-inline-block"
+          div class="ml-md-auto col-6 text-right py-2 position-relative overflow-hidden"
+            div class="skew_bg position-absolute w-75 h-100"
+            p class="mb-0 position-relative"
+              = link_to '#', class: "mr-2" do
+                = icon('far', 'bell')
+              span class="d-md-inline-block d-none"
+                | elliot_robinson@hotmail.co.uk
+              = link_to '#', class: "mr-2" do
+                = icon('fas', 'caret-down')
+
+      div class="p-3 content_main"
+        div class="row"
+          div class="col-md-9 bg-light py-4 radius_c shadow-sm"
+            /!-- Nav pills --
+            ul class="nav nav-pills justify-content-center" role="tablist"
+              li class="nav-item"
+                div class="wizard_line"
+                = link_to '1' ,"#new", class: "nav-link active"
+              li class="nav-item"
+                div class="wizard_line"
+                = link_to '2' ,"#access", class: "nav-link nav-2"
+              li class="nav-item"
+                = link_to '3' ,"#tags", class: "nav-link nav-2"
+            div class="tab-content mt-3"
+              div id="new" class="container tab-pane active"
+                br
+                h5 class="mb-4" Create new Campaign
+                div class="form-group"
+                  label Title
+                  input type="text" class="form-control"
+                div class="form-group"
+                  label Description
+                  textarea type="text" rows="8" class="form-control" placeholder="Enter as much information here as possible to describe your campaign and what you are trying to achieve. Others will see this description unless the campaign is accessible to collaborators only."
+                div class="text-right"
+                  a class="btnNext btn" Next
+              div id="access" class="container tab-pane fade"
+                br
+                h5 class="mb-4"This Campaign will be accessible to
+                div class="left_border pl-2"
+                  div class="custom-control custom-radio mb-4"
+                    input type="radio" class="custom-control-input" id="everyone" name="example1"
+                    label class="custom-control-label pl-1" for="everyone"
+                      strong class="d-block mb-2"Everyone
+                      This campaign will be visible to other Policy Mogul users and may be indexed by search engines. Specific documents, collaborators and other information you choose can be made available to campaign collaborators only.
+
+                  div class="custom-control custom-radio mb-4"
+                    input type="radio" class="custom-control-input" id="both" name="example1"
+                    label class="custom-control-label pl-1" for="both"
+                      strong class="d-block mb-2"Parliamentarians and collaborators only
+                      Policy Mogul maintains a list of MPs and peers, and allows them and their staff to view campaigns related to their interests. Specific documents, collaborators and other information you choose can be made available to campaign collaborators only
+
+                  div class="custom-control custom-radio mb-4"
+                    input type="radio" class="custom-control-input" id="collab" name="example1"
+                    label class="custom-control-label pl-1" for="collab"
+                      strong class="d-block mb-2"Collaborators only
+                      This campaign will not be displayed to others you will need to invite specific people in order to collaborate with them.
+                  div class="text-right"
+                    a class="btnPrevious btn" Previous
+                    a class="btnNext btn" Next
+
+
+              div id="tags" class="container tab-pane fade"
+                br
+
+                h5 class="mb-4" Tags that describe this Campaign
+                div class="tags_list"
+                  span
+                    | Energy(Policy)
+                    = link_to "x", '#'
+
+                  span
+                    | Energy(Exploration)
+                    = link_to "x", '#'
+
+                  span
+                    | Disabled
+                    = link_to "x", '#'
+
+                  span
+                    | Energy(Green Fuel)
+                    = link_to "x", '#'
+
+                  span
+                    | Energy(Efficiency)
+                    = link_to "x", '#'
+
+                  span
+                    | Envoirnment(Policy)
+                    = link_to "x", '#'
+
+                  span
+                    | Energy(Policy)
+                    = link_to "x", '#'
+
+
+                div class="add_tags mt-3"
+                  input type="text" class="form-control" placeholder="Type to add more tags..."
+                  div class="check_tags p-2"
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example"
+                        label class="custom-control-label" for="example"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example1"
+                        label class="custom-control-label" for="example1"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example2"
+                        label class="custom-control-label" for="example2"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example3"
+                        label class="custom-control-label" for="example3"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example4"
+                        label class="custom-control-label" for="example4"Custom checkbox
+
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example5"
+                        label class="custom-control-label" for="example5"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example6"
+                        label class="custom-control-label" for="example6"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example7"
+                        label class="custom-control-label" for="example7"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example8"
+                        label class="custom-control-label" for="example8"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example9"
+                        label class="custom-control-label" for="example9"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example11"
+                        label class="custom-control-label" for="example11"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example12"
+                        label class="custom-control-label" for="example12"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example13"
+                        label class="custom-control-label" for="example13"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example14"
+                        label class="custom-control-label" for="example14"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example15"
+                        label class="custom-control-label" for="example15"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example16"
+                        label class="custom-control-label" for="example16"Custom checkbox
+
+                    div class="custom-control custom-checkbox mb-1"
+                        input type="checkbox" class="custom-control-input" id="example17"
+                        label class="custom-control-label" for="example17"Custom checkbox
+
+              div class="text-right"
+                  a class="btnPrevious btn" Previous
+                  a class="btnSave btn" Save
+
+          div class="col-md-3 text-center mt-2"
+            = link_to '#' do
+              = icon('fa','long-arrow-alt-left')
+              | Back to campaigns

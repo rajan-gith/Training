@@ -17,4 +17,4 @@ function next_click_behave() {
   });
 }
 
-$(next_click_behave)
+$(next_click_behave);
