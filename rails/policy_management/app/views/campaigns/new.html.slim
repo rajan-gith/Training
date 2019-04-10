@@ -61,7 +61,7 @@ div class="container-fluid "
                   label Description
                   textarea type="text" rows="8" class="form-control" placeholder="Enter as much information here as possible to describe your campaign and what you are trying to achieve. Others will see this description unless the campaign is accessible to collaborators only."
                 div class="text-right"
-                  a class="btnNext btn" Next
+                  a class="btnNext btn ml-1" Next
               div id="access" class="container tab-pane fade"
                 br
                 h5 class="mb-4"This Campaign will be accessible to
@@ -85,7 +85,7 @@ div class="container-fluid "
                       This campaign will not be displayed to others you will need to invite specific people in order to collaborate with them.
                 div class="text-right"
                   a class="btnPrevious btn" Previous
-                  a class="btnNext btn" Next
+                  a class="btnNext btn ml-1" Next
 
 
               div id="tags" class="container tab-pane fade"
@@ -196,9 +196,9 @@ div class="container-fluid "
 
                 div class="text-right"
                     a class="btnPrevious btn" Previous
-                    a class="btnSave btn" Save
+                    a class="btnSave btn ml-1" Save
 
           div class="col-md-3 text-center mt-2"
-            = link_to '#' do
+            = link_to '#', class:"back_anchor" do
               = icon('fa','long-arrow-alt-left')
-              | Back to campaigns
+              |  Back to campaigns
