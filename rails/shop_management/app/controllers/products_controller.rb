@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     params[:page] ||=1
     @products = Product.paginate(page: params[:page], per_page: 2)
   end
-  
+
   def search
     params[:sort_cat] ||='name'
     params[:sort_type] ||= 'asc'

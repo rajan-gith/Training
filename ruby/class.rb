@@ -1,4 +1,5 @@
 class Customer
+	attr_accessor :customer_name
 	@@no_of_customers = 0
 	def initialize(id = nil,name = nil,age = nil)
 		@customer_id = id	
@@ -7,8 +8,8 @@ class Customer
 		@@no_of_customers += 1 
 		@position = @@no_of_customers
 	end
-	def hello
-		puts("Hello #{@customer_name}. How are you?")
+	def self.hello(customer_name)
+		puts("Hello #{customer_name}. How are you?")
 	end
 	def showage
 		puts("#{@customer_name}'s age is #{@customer_age}")
@@ -18,7 +19,8 @@ class Customer
 	end
 	
 end
-new_object = Customer.new(1,'David',99)
-new_object.hello
+new_object = Customer.new(1,'Daavid',99)
+Customer.hello(new_object.customer_name)
 new_object.showage
 new_object.show_details
+
